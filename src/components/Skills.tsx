@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section id="skills" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="04" eyebrow="toolbox" title="Skills & stack" />
+        <SectionHeading index="05" eyebrow="toolbox" title="Skills & stack" />
 
         <div className="grid gap-4 sm:grid-cols-2">
           {SKILLS.map((group, i) => (

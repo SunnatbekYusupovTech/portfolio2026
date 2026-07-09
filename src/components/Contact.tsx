@@ -1,4 +1,4 @@
-import { FiMail, FiArrowUpRight } from 'react-icons/fi';
+import { FiMail, FiArrowUpRight, FiDownload } from 'react-icons/fi';
 import { SITE, SOCIALS } from '@/lib/data';
 import SocialIcon from './SocialIcon';
 import SectionHeading from './SectionHeading';
@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="06" eyebrow="say hello" title="Let's connect" />
+        <SectionHeading index="07" eyebrow="say hello" title="Let's connect" />
 
         <Reveal>
           <div className="card relative overflow-hidden p-8 text-center sm:p-12">
@@ -22,12 +22,21 @@ export default function Contact() {
                 AI, EdTech and building products. The fastest way to reach me:
               </p>
 
-              <a
-                href={`mailto:${SITE.email}`}
-                className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 font-medium text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
-              >
-                <FiMail /> {SITE.email}
-              </a>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                <a
+                  href={`mailto:${SITE.email}`}
+                  className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 font-medium text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
+                >
+                  <FiMail /> {SITE.email}
+                </a>
+                <a
+                  href={SITE.cv}
+                  download
+                  className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface-2/60 px-6 py-3.5 font-medium text-ink transition-colors hover:border-accent-2/40 hover:bg-surface-2"
+                >
+                  <FiDownload /> Download CV
+                </a>
+              </div>
 
               <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
                 {SOCIALS.map((s) => (

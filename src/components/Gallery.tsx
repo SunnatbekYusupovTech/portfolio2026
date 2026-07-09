@@ -7,7 +7,7 @@ export default function Gallery() {
   return (
     <section id="highlights" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="03" eyebrow="in the field" title="Highlights" />
+        <SectionHeading index="04" eyebrow="in the field" title="Highlights" />
 
         {/* Achievements — credible, crawlable facts about the person. */}
         <Reveal>

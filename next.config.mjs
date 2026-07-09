@@ -15,6 +15,13 @@ const nextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
+      {
+        // CV gets a shorter cache — it changes when the career does.
+        source: '/Sunnatbek_Yusupov_CV.pdf',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400' },
+        ],
+      },
     ];
   },
 };

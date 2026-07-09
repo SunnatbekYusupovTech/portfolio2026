@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="05" eyebrow="selected work" title="Projects" />
+        <SectionHeading index="06" eyebrow="selected work" title="Projects" />
 
         <div className="grid gap-4 md:grid-cols-2">
           {PROJECTS.map((project, i) => (

@@ -26,8 +26,13 @@ export const metadata: Metadata = {
     'Aidevix founder',
     'Aidevix CEO',
     'Frontend Engineer Uzbekistan',
+    'AI Integration Specialist',
+    'Prompt Engineering expert Uzbekistan',
     'React developer Tashkent',
     'Next.js developer',
+    'Frontend Team Lead',
+    'MARS IT School Best Teacher',
+    'Sunnatbek Yusupov CV',
     'Sunnatbek Yusupov portfolio',
   ],
   alternates: {
@@ -90,7 +95,7 @@ const personSchema = {
     `${SITE.url}/sunnatbek-yusupov-portrait-studio.jpg`,
     `${SITE.url}/sunnatbek-yusupov-teaching-mars-it-school.jpg`,
   ],
-  jobTitle: 'Founder & CEO',
+  jobTitle: ['Founder & CEO at Aidevix', 'Frontend Engineer', 'AI Integration Specialist'],
   award: [
     'Best Teacher — MARS IT School (Q3 2024)',
   ],
@@ -98,12 +103,16 @@ const personSchema = {
   email: `mailto:${SITE.email}`,
   knowsAbout: [
     'Artificial Intelligence',
+    'Prompt Engineering',
+    'Large Language Models',
     'Frontend Development',
     'React',
     'Next.js',
     'TypeScript',
     'Software Engineering',
     'Programming Education',
+    'AI Agents',
+    'EdTech',
     'Startups',
   ],
   knowsLanguage: ['uz', 'ru', 'en'],
@@ -112,13 +121,50 @@ const personSchema = {
     '@type': 'Place',
     address: { '@type': 'PostalAddress', addressLocality: 'Tashkent', addressCountry: 'UZ' },
   },
-  worksFor: {
-    '@type': 'Organization',
-    '@id': 'https://aidevix.uz/#organization',
-    name: AIDEVIX.name,
-    url: AIDEVIX.url,
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Frontend Engineer & AI Integration Specialist',
+    occupationLocation: { '@type': 'City', name: 'Tashkent' },
+    skills: 'React, Next.js, TypeScript, Prompt Engineering, LLM integration',
+  },
+  worksFor: [
+    {
+      '@type': 'Organization',
+      '@id': 'https://aidevix.uz/#organization',
+      name: AIDEVIX.name,
+      url: AIDEVIX.url,
+    },
+    {
+      '@type': 'Organization',
+      name: 'Alloplay',
+      description: 'Video streaming platform — Team Lead / Senior Frontend Engineer',
+    },
+  ],
+  alumniOf: { '@type': 'EducationalOrganization', name: "Najot Ta'lim" },
+  // The downloadable CV, tied to the entity so search engines index it under the name.
+  subjectOf: {
+    '@type': 'CreativeWork',
+    name: `${SITE.name} — CV / Resume`,
+    url: `${SITE.url}${SITE.cv}`,
+    encodingFormat: 'application/pdf',
   },
   sameAs: SAME_AS,
+};
+
+// Google's recommended markup for personal profile pages — makes the page
+// itself an explicit "profile of this person" entity (Search may use it for
+// people results and knowledge panels).
+const profilePageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${SITE.url}/#profilepage`,
+  url: SITE.url,
+  name: `${SITE.name} — ${SITE.role}`,
+  inLanguage: 'en',
+  isPartOf: { '@id': `${SITE.url}/#website` },
+  about: { '@id': `${SITE.url}/#person` },
+  mainEntity: { '@id': `${SITE.url}/#person` },
+  dateModified: new Date().toISOString(),
 };
 
 const websiteSchema = {
@@ -143,6 +189,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
         />
       </head>
       <body className="antialiased">

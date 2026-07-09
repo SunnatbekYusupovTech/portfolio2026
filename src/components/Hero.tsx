@@ -1,4 +1,4 @@
-import { FiArrowUpRight, FiMapPin } from 'react-icons/fi';
+import { FiArrowUpRight, FiDownload, FiMapPin } from 'react-icons/fi';
 import { SITE, SOCIALS } from '@/lib/data';
 import SocialIcon from './SocialIcon';
 import Avatar from './Avatar';
@@ -51,6 +51,13 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface/60 px-5 py-3 font-medium text-ink transition-colors hover:border-accent/40 hover:bg-surface-2"
               >
                 Visit Aidevix <FiArrowUpRight />
+              </a>
+              <a
+                href={SITE.cv}
+                download
+                className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface/60 px-5 py-3 font-medium text-ink transition-colors hover:border-accent-2/40 hover:bg-surface-2"
+              >
+                Download CV <FiDownload size={16} />
               </a>
             </div>
 

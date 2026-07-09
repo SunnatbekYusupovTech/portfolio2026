@@ -7,7 +7,7 @@ export default function Aidevix() {
   return (
     <section id="aidevix" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="02" eyebrow="what I'm building" title="Aidevix" />
+        <SectionHeading index="03" eyebrow="what I'm building" title="Aidevix" />
 
         <Reveal>
           <div className="card card-hover relative overflow-hidden p-8 sm:p-10">

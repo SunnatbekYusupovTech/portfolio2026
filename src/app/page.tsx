@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Experience from '@/components/Experience';
 import Aidevix from '@/components/Aidevix';
 import Gallery from '@/components/Gallery';
 import Skills from '@/components/Skills';
@@ -15,6 +16,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <About />
+        <Experience />
         <Aidevix />
         <Gallery />
         <Skills />
