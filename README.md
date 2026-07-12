@@ -1,4 +1,4 @@
-# sunnatbekyusupov.tech — Personal Website
+# sunnatbekyusupov.uz — Personal Website
 
 Personal portfolio of **Sunnatbek Yusupov** — Founder & CEO at Aidevix, Frontend Engineer.
 
@@ -52,7 +52,7 @@ Until then, the hero shows an "SY" monogram fallback. The social preview image
 
 1. Push this folder to a GitHub repo.
 2. On [vercel.com](https://vercel.com) → **New Project** → import the repo → Deploy.
-3. Project → **Settings → Domains** → add `sunnatbekyusupov.tech`.
+3. Project → **Settings → Domains** → add `sunnatbekyusupov.uz`.
 4. At your domain registrar, point DNS to Vercel:
    - `A` record `@` → `76.76.21.21`, **or** `CNAME` `www` → `cname.vercel-dns.com`
    - (Vercel shows the exact records to use.)

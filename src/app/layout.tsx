@@ -34,6 +34,10 @@ export const metadata: Metadata = {
     'MARS IT School Best Teacher',
     'Sunnatbek Yusupov CV',
     'Sunnatbek Yusupov portfolio',
+    'Суннатбек Юсупов',
+    'Суннатбек Юсупов Aidevix',
+    'Sunnatbek Yusupov dasturchi',
+    'Sunnatbek Yusupov Oʻzbekiston',
   ],
   alternates: {
     canonical: SITE.url,
@@ -84,6 +88,8 @@ const personSchema = {
   '@type': 'Person',
   '@id': `${SITE.url}/#person`,
   name: SITE.name,
+  // Cyrillic spelling — Yandex and Cyrillic-script searches resolve to the same entity.
+  alternateName: ['Суннатбек Юсупов', 'Sunnatbek Yusupov'],
   givenName: SITE.firstName,
   familyName: SITE.lastName,
   url: SITE.url,

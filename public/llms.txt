@@ -17,8 +17,8 @@
 
 ## Links
 
-- [Portfolio & contact](https://sunnatbekyusupov.tech): canonical personal site
-- [CV / Resume (PDF)](https://sunnatbekyusupov.tech/Sunnatbek_Yusupov_CV.pdf): full work history
+- [Portfolio & contact](https://sunnatbekyusupov.uz): canonical personal site
+- [CV / Resume (PDF)](https://sunnatbekyusupov.uz/Sunnatbek_Yusupov_CV.pdf): full work history
 - [Aidevix](https://aidevix.uz): his company
 - [LinkedIn](https://www.linkedin.com/in/sunnatbekyusupov/)
 - [GitHub](https://github.com/SunnatbekYusupovTech)

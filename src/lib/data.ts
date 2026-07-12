@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const SITE = {
-  url: 'https://sunnatbekyusupov.tech',
+  url: 'https://sunnatbekyusupov.uz',
   name: 'Sunnatbek Yusupov',
   firstName: 'Sunnatbek',
   lastName: 'Yusupov',
