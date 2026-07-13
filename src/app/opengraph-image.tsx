@@ -2,9 +2,7 @@ import { ImageResponse } from 'next/og';
 import { SITE } from '@/lib/data';
 
 // Auto-generated 1200×630 social preview — no binary asset needed. Next.js wires
-// this into og:image (and twitter:image) automatically. Runs on the edge runtime
-// (next/og's Node path fails to prerender here) and is cached by the CDN.
-export const runtime = 'edge';
+// this into og:image (and twitter:image) automatically and caches it on the CDN.
 export const alt = `${SITE.name} — ${SITE.role}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
@@ -49,8 +47,8 @@ export default function OGImage() {
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ fontSize: 82, fontWeight: 700, letterSpacing: '-0.03em' }}>{SITE.name}</div>
-          <div style={{ fontSize: 34, color: '#6366F1', marginTop: 8 }}>
-            {SITE.role} · {SITE.subRole}
+          <div style={{ display: 'flex', fontSize: 34, color: '#6366F1', marginTop: 8 }}>
+            {`${SITE.role} · ${SITE.subRole}`}
           </div>
           <div style={{ fontSize: 26, color: '#8A8F9A', marginTop: 20, maxWidth: 900 }}>
             {SITE.tagline}

@@ -2,7 +2,6 @@ import { ImageResponse } from 'next/og';
 
 // Generated 180×180 Apple touch icon — Next.js wires this into
 // <link rel="apple-touch-icon"> automatically. No binary asset needed.
-export const runtime = 'edge';
 export const size = { width: 180, height: 180 };
 export const contentType = 'image/png';
 
