@@ -17,6 +17,9 @@ export const SITE = {
   // Fayl bo'lmasa Avatar komponenti "SY" bosh harflariga tushadi.
   avatar: '/sunnatbek-yusupov.jpg',
   cv: '/Sunnatbek_Yusupov_CV.pdf',
+  // Schema.org freshness signallari — kontent o'zgarganda qo'lda yangilang.
+  createdAt: '2026-07-09',
+  updatedAt: '2026-07-13',
 } as const;
 
 export const SOCIALS = [
@@ -35,7 +38,7 @@ export const SAME_AS = [
   'https://www.facebook.com/sunnatbek.yusupov.7',
   'https://t.me/SUNNATBEE',
   'https://aidevix.uz',
-];
+] as const;
 
 export const ABOUT = [
   "I'm Sunnatbek Yusupov — a Frontend Engineer, AI Integration Specialist and the Founder & CEO of Aidevix, the first AI-first programming education platform built for the Uzbek-speaking world.",

@@ -15,6 +15,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open]);
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
@@ -50,6 +64,7 @@ export default function Navbar() {
           className="text-ink md:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
+          aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <FiX size={22} /> : <FiMenu size={22} />}
@@ -57,7 +72,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-line bg-bg/95 backdrop-blur-md md:hidden">
+        <div id="mobile-nav" className="border-t border-line bg-bg/95 backdrop-blur-md md:hidden">
           <ul className="wrap flex flex-col gap-1 py-4">
             {NAV.map((item) => (
               <li key={item.href}>

@@ -27,14 +27,14 @@ export default function Contact() {
                   href={`mailto:${SITE.email}`}
                   className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 font-medium text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
                 >
-                  <FiMail /> {SITE.email}
+                  <FiMail aria-hidden="true" /> {SITE.email}
                 </a>
                 <a
                   href={SITE.cv}
                   download
                   className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface-2/60 px-6 py-3.5 font-medium text-ink transition-colors hover:border-accent-2/40 hover:bg-surface-2"
                 >
-                  <FiDownload /> Download CV
+                  <FiDownload aria-hidden="true" /> Download CV
                 </a>
               </div>
 
@@ -48,7 +48,7 @@ export default function Contact() {
                     className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface-2/60 px-4 py-2 text-sm text-muted transition-colors hover:border-accent/40 hover:text-ink"
                   >
                     <SocialIcon name={s.icon} size={16} /> {s.label}
-                    <FiArrowUpRight size={13} className="text-faint" />
+                    <FiArrowUpRight size={13} aria-hidden="true" className="text-faint" />
                   </a>
                 ))}
               </div>

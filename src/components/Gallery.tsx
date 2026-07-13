@@ -38,8 +38,11 @@ export default function Gallery() {
                     src={item.src}
                     alt={item.alt}
                     fill
-                    loading="lazy"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes={
+                      item.wide
+                        ? '(max-width: 1024px) 100vw, 66vw'
+                        : '(max-width: 1024px) 50vw, 33vw'
+                    }
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent" />

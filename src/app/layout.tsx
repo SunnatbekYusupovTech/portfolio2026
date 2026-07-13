@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swa
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display', display: 'swap' });
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono', display: 'swap' });
 
-const description = `${SITE.name} — ${SITE.role} and ${SITE.subRole} based in ${SITE.location}. ${SITE.tagline}`;
+// Kept under ~160 chars so Google doesn't truncate it in the SERP snippet.
+const description = `${SITE.name} — ${SITE.role} and ${SITE.subRole} based in ${SITE.location}.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -58,6 +59,10 @@ export const metadata: Metadata = {
     title: `${SITE.name} — ${SITE.role}`,
     description,
   },
+  verification: {
+    google: 'vug4DeupYoJ3V1zIEKH59ltdfWWyKMqSwCktgXp2kB0',
+    yandex: '8b301af7a14e4521',
+  },
   robots: {
     index: true,
     follow: true,
@@ -70,7 +75,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    icon: [
+      // .ico fallback for legacy crawlers and Yandex SERP favicons.
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
   },
 };
 
@@ -170,7 +179,8 @@ const profilePageSchema = {
   isPartOf: { '@id': `${SITE.url}/#website` },
   about: { '@id': `${SITE.url}/#person` },
   mainEntity: { '@id': `${SITE.url}/#person` },
-  dateModified: new Date().toISOString(),
+  dateCreated: SITE.createdAt,
+  dateModified: SITE.updatedAt,
 };
 
 const websiteSchema = {

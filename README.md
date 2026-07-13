@@ -2,7 +2,8 @@
 
 Personal portfolio of **Sunnatbek Yusupov** — Founder & CEO at Aidevix, Frontend Engineer.
 
-Built with **Next.js 14 (App Router) · TypeScript · Tailwind CSS · Framer Motion**.
+Built with **Next.js 14 (App Router) · TypeScript · Tailwind CSS** (animations via
+CSS keyframes + IntersectionObserver).
 Optimized for SEO (canonical Person JSON-LD, sitemap, robots, auto OG image),
 performance (static render, next/font, long-cache headers) and accessibility.
 
@@ -26,6 +27,9 @@ npm run lint       # ESLint
 
 All text, links, skills and projects live in **one file**: [`src/lib/data.ts`](src/lib/data.ts).
 Edit values there — every section, the page `<metadata>` and the SEO schema update automatically.
+
+The downloadable CV (`public/Sunnatbek_Yusupov_CV.pdf`) is exported manually from
+[`cv/Sunnatbek_Yusupov_CV.html`](cv/Sunnatbek_Yusupov_CV.html) — keep the two in sync when editing.
 
 ## 🖼️ Add your photo (important)
 

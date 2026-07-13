@@ -34,7 +34,7 @@ export default function Hero() {
             </p>
 
             <div className="mt-7 flex items-center gap-2 font-mono text-sm text-faint">
-              <FiMapPin size={15} /> {SITE.location}
+              <FiMapPin size={15} aria-hidden="true" /> {SITE.location}
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -42,7 +42,7 @@ export default function Hero() {
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 font-medium text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
               >
-                Get in touch <FiArrowUpRight />
+                Get in touch <FiArrowUpRight aria-hidden="true" />
               </a>
               <a
                 href="https://aidevix.uz"
@@ -50,14 +50,14 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface/60 px-5 py-3 font-medium text-ink transition-colors hover:border-accent/40 hover:bg-surface-2"
               >
-                Visit Aidevix <FiArrowUpRight />
+                Visit Aidevix <FiArrowUpRight aria-hidden="true" />
               </a>
               <a
                 href={SITE.cv}
                 download
                 className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface/60 px-5 py-3 font-medium text-ink transition-colors hover:border-accent-2/40 hover:bg-surface-2"
               >
-                Download CV <FiDownload size={16} />
+                Download CV <FiDownload size={16} aria-hidden="true" />
               </a>
             </div>
 

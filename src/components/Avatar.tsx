@@ -12,7 +12,10 @@ export default function Avatar({ src, alt }: { src: string; alt: string }) {
 
   return (
     <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-gradient-to-br from-surface-2 to-surface">
-      <span className="absolute inset-0 flex items-center justify-center font-display text-7xl font-bold text-white/10">
+      <span
+        aria-hidden="true"
+        className="absolute inset-0 flex items-center justify-center font-display text-7xl font-bold text-white/10"
+      >
         SY
       </span>
       {!failed && (

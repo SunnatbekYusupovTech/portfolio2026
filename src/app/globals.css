@@ -77,12 +77,19 @@
 
   /* Scroll-reveal (see components/Reveal.tsx) — CSS only, no JS animation lib. */
   .reveal {
-    opacity: 0;
-    transform: translateY(18px);
     transition:
       opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
       transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
+  }
+
+  /* Hide-before-reveal only when JS can run — no-JS UAs (and old browsers
+     without `scripting` support) see the content immediately. */
+  @media (scripting: enabled) {
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+    }
   }
 
   .reveal-visible {
