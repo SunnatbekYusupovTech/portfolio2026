@@ -1,18 +1,21 @@
 import Image from 'next/image';
-import { GALLERY, ACHIEVEMENTS } from '@/lib/data';
+import { GALLERY } from '@/lib/data';
+import { getDict, type Locale } from '@/lib/i18n';
 import SectionHeading from './SectionHeading';
 import Reveal from './Reveal';
 
-export default function Gallery() {
+export default function Gallery({ locale }: { locale: Locale }) {
+  const dict = getDict(locale);
+
   return (
     <section id="highlights" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="04" eyebrow="in the field" title="Highlights" />
+        <SectionHeading index="04" eyebrow={dict.highlights.eyebrow} title={dict.highlights.title} />
 
         {/* Achievements — credible, crawlable facts about the person. */}
         <Reveal>
           <ul className="mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {ACHIEVEMENTS.map((a) => (
+            {dict.highlights.achievements.map((a) => (
               <li key={a.title} className="card p-5">
                 <p className="font-display text-sm font-bold leading-snug text-ink">{a.title}</p>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted">{a.detail}</p>
@@ -48,7 +51,7 @@ export default function Gallery() {
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent" />
                 </div>
                 <figcaption className="absolute inset-x-0 bottom-0 p-4 font-mono text-xs text-ink">
-                  {item.caption}
+                  {dict.highlights.captions[i]}
                 </figcaption>
               </figure>
             </Reveal>

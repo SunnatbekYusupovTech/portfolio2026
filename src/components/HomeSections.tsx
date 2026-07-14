@@ -8,22 +8,23 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import type { Locale } from '@/lib/i18n';
 
-export default function HomePage() {
+export default function HomeSections({ locale }: { locale: Locale }) {
   return (
     <>
-      <Navbar />
+      <Navbar locale={locale} />
       <main id="main">
-        <Hero />
-        <About />
-        <Experience />
-        <Aidevix />
-        <Gallery />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Hero locale={locale} />
+        <About locale={locale} />
+        <Experience locale={locale} />
+        <Aidevix locale={locale} />
+        <Gallery locale={locale} />
+        <Skills locale={locale} />
+        <Projects locale={locale} />
+        <Contact locale={locale} />
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </>
   );
 }

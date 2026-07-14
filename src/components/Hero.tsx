@@ -1,9 +1,12 @@
 import { FiArrowUpRight, FiDownload, FiMapPin } from 'react-icons/fi';
 import { SITE, SOCIALS } from '@/lib/data';
+import { getDict, type Locale } from '@/lib/i18n';
 import SocialIcon from './SocialIcon';
 import Avatar from './Avatar';
 
-export default function Hero() {
+export default function Hero({ locale }: { locale: Locale }) {
+  const dict = getDict(locale);
+
   return (
     <section id="top" className="relative overflow-hidden pt-28 sm:pt-36">
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-bg" />
@@ -17,7 +20,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-2 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-2" />
               </span>
-              Available for collaboration &amp; remote work
+              {dict.hero.available}
             </p>
 
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
@@ -25,16 +28,15 @@ export default function Hero() {
             </h1>
 
             <p className="mt-4 font-mono text-base text-accent sm:text-lg">
-              {SITE.role} <span className="text-faint">·</span> {SITE.subRole}
+              {dict.role} <span className="text-faint">·</span> {dict.subRole}
             </p>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-              {SITE.tagline} I build products with React, Next.js and TypeScript — and
-              I&apos;m growing Uzbekistan&apos;s next generation of AI-fluent developers.
+              {dict.tagline} {dict.hero.intro}
             </p>
 
             <div className="mt-7 flex items-center gap-2 font-mono text-sm text-faint">
-              <FiMapPin size={15} aria-hidden="true" /> {SITE.location}
+              <FiMapPin size={15} aria-hidden="true" /> {dict.location}
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -42,7 +44,7 @@ export default function Hero() {
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 font-medium text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
               >
-                Get in touch <FiArrowUpRight aria-hidden="true" />
+                {dict.hero.getInTouch} <FiArrowUpRight aria-hidden="true" />
               </a>
               <a
                 href="https://aidevix.uz"
@@ -50,14 +52,14 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface/60 px-5 py-3 font-medium text-ink transition-colors hover:border-accent/40 hover:bg-surface-2"
               >
-                Visit Aidevix <FiArrowUpRight aria-hidden="true" />
+                {dict.hero.visitAidevix} <FiArrowUpRight aria-hidden="true" />
               </a>
               <a
                 href={SITE.cv}
                 download
                 className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface/60 px-5 py-3 font-medium text-ink transition-colors hover:border-accent-2/40 hover:bg-surface-2"
               >
-                Download CV <FiDownload size={16} aria-hidden="true" />
+                {dict.hero.downloadCv} <FiDownload size={16} aria-hidden="true" />
               </a>
             </div>
 
@@ -88,7 +90,7 @@ export default function Hero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
                 <span className="ml-2 font-mono text-[11px] text-faint">sunnatbek.jpg</span>
               </div>
-              <Avatar src={SITE.avatar} alt={`${SITE.name} — ${SITE.role}`} />
+              <Avatar src={SITE.avatar} alt={`${SITE.name} — ${dict.role}`} />
             </div>
           </div>
         </div>

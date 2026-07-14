@@ -1,14 +1,17 @@
 import { FiMail, FiArrowUpRight, FiDownload } from 'react-icons/fi';
 import { SITE, SOCIALS } from '@/lib/data';
+import { getDict, type Locale } from '@/lib/i18n';
 import SocialIcon from './SocialIcon';
 import SectionHeading from './SectionHeading';
 import Reveal from './Reveal';
 
-export default function Contact() {
+export default function Contact({ locale }: { locale: Locale }) {
+  const dict = getDict(locale);
+
   return (
     <section id="contact" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="07" eyebrow="say hello" title="Let's connect" />
+        <SectionHeading index="07" eyebrow={dict.contact.eyebrow} title={dict.contact.title} />
 
         <Reveal>
           <div className="card relative overflow-hidden p-8 text-center sm:p-12">
@@ -18,8 +21,7 @@ export default function Contact() {
             />
             <div className="relative">
               <p className="mx-auto max-w-xl text-lg leading-relaxed text-muted">
-                I&apos;m open to collaboration, remote opportunities and conversations about
-                AI, EdTech and building products. The fastest way to reach me:
+                {dict.contact.blurb}
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -34,7 +36,7 @@ export default function Contact() {
                   download
                   className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface-2/60 px-6 py-3.5 font-medium text-ink transition-colors hover:border-accent-2/40 hover:bg-surface-2"
                 >
-                  <FiDownload aria-hidden="true" /> Download CV
+                  <FiDownload aria-hidden="true" /> {dict.contact.downloadCv}
                 </a>
               </div>
 

@@ -2,9 +2,33 @@
 
 import { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { NAV, SITE } from '@/lib/data';
+import { getDict, LOCALES, type Locale } from '@/lib/i18n';
 
-export default function Navbar() {
+const localeHref = (locale: Locale) => (locale === 'en' ? '/' : `/${locale}`);
+
+function LocaleSwitcher({ current, className }: { current: Locale; className?: string }) {
+  return (
+    <span className={`inline-flex items-center gap-2 font-mono text-[11px] uppercase ${className ?? ''}`}>
+      {LOCALES.map((l, i) => (
+        <span key={l} className="inline-flex items-center gap-2">
+          {i > 0 && <span className="text-line">/</span>}
+          {l === current ? (
+            <span aria-current="true" className="text-accent">
+              {l}
+            </span>
+          ) : (
+            <a href={localeHref(l)} hrefLang={l} className="text-faint transition-colors hover:text-ink">
+              {l}
+            </a>
+          )}
+        </span>
+      ))}
+    </span>
+  );
+}
+
+export default function Navbar({ locale }: { locale: Locale }) {
+  const dict = getDict(locale);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -42,7 +66,7 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {NAV.map((item) => (
+          {dict.nav.map((item) => (
             <li key={item.href}>
               <a href={item.href} className="font-mono text-[13px] text-muted transition-colors hover:text-ink">
                 {item.label}
@@ -54,27 +78,33 @@ export default function Navbar() {
               href="#contact"
               className="rounded-md border border-accent/40 bg-accent/10 px-3.5 py-1.5 font-mono text-[13px] text-ink transition-colors hover:bg-accent/20"
             >
-              Get in touch
+              {dict.hero.getInTouch}
             </a>
+          </li>
+          <li>
+            <LocaleSwitcher current={locale} />
           </li>
         </ul>
 
-        <button
-          type="button"
-          className="text-ink md:hidden"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <FiX size={22} /> : <FiMenu size={22} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <LocaleSwitcher current={locale} />
+          <button
+            type="button"
+            className="text-ink"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <FiX size={22} /> : <FiMenu size={22} />}
+          </button>
+        </div>
       </nav>
 
       {open && (
         <div id="mobile-nav" className="border-t border-line bg-bg/95 backdrop-blur-md md:hidden">
           <ul className="wrap flex flex-col gap-1 py-4">
-            {NAV.map((item) => (
+            {dict.nav.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
