@@ -17,7 +17,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-display)', 'system-ui', 'sans-serif'],
+        // Space Grotesk has no Cyrillic — fall through to Inter (which does)
+        // before system-ui so /ru headings stay in-brand.
+        display: ['var(--font-display)', 'var(--font-sans)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'monospace'],
       },
       maxWidth: {

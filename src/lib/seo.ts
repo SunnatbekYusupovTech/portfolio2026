@@ -3,12 +3,14 @@ import { SITE } from './data';
 import { getDict, localeUrl, type Locale } from './i18n';
 
 // hreflang map rendered on every page — all variants point at each other and
-// x-default falls back to the English root.
+// x-default falls back to the English root. URLs are byte-identical to each
+// page's canonical (no trailing slash) so the canonical always appears in its
+// own hreflang set.
 const LANGUAGES = {
-  en: `${SITE.url}/`,
+  en: SITE.url,
   uz: `${SITE.url}/uz`,
   ru: `${SITE.url}/ru`,
-  'x-default': `${SITE.url}/`,
+  'x-default': SITE.url,
 };
 
 const KEYWORDS = [
