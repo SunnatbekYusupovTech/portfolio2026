@@ -12,7 +12,7 @@ export const SITE = {
   subRole: 'Frontend Engineer & AI Integration Specialist',
   tagline: 'Building AI-first programming education in Uzbekistan.',
   location: 'Tashkent, Uzbekistan',
-  email: 'sunnatbeky56@gmail.com',
+  email: 'sunnatbekyusupov.tech@gmail.com',
   // Profesional foto: public/sunnatbek-yusupov.jpg ga qo'ying (kvadrat, ~800x800).
   // Fayl bo'lmasa Avatar komponenti "SY" bosh harflariga tushadi.
   avatar: '/sunnatbek-yusupov.jpg',

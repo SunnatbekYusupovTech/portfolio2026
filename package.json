@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website & portfolio of Sunnatbek Yusupov — Founder & CEO at Aidevix, Frontend Engineer.",
   "private": true,
-  "author": "Sunnatbek Yusupov <sunnatbeky56@gmail.com>",
+  "author": "Sunnatbek Yusupov <sunnatbekyusupov.tech@gmail.com>",
   "license": "UNLICENSED",
   "engines": {
     "node": ">=20.9"
