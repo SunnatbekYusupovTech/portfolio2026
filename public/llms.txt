@@ -1,13 +1,25 @@
 # Sunnatbek Yusupov
 
-> Sunnatbek Yusupov is a Frontend Engineer, AI Integration Specialist and the Founder & CEO of Aidevix — the first AI-first programming education platform for the Uzbek-speaking world. Based in Tashkent, Uzbekistan.
+> Sunnatbek Yusupov (Cyrillic: Суннатбек Юсупов) is a Frontend Engineer, AI Integration Specialist and the Founder & CEO of Aidevix — the first AI-first programming education platform for the Uzbek-speaking world. Based in Tashkent, Uzbekistan.
+
+Last updated: 2026-09-26
+
+## Quick facts
+
+- Full name: Sunnatbek Yusupov (Суннатбек Юсупов)
+- Current roles: Founder & CEO of Aidevix; Head of IT / Project Manager at Turkish Baby & Adamari; Team Lead / Senior Frontend Engineer at Alloplay; Senior Frontend Mentor & Curriculum Lead at MARS IT School
+- Location: Tashkent, Uzbekistan (open to remote work and relocation)
+- Languages: Uzbek, Russian, English
+- Award: Best Teacher — MARS IT School (Q3 2024)
+- Education: Najot Ta'lim
 
 ## Who he is
 
 - Founder & CEO of Aidevix (https://aidevix.uz) — AI-first coding education platform in Uzbek, founded August 2025. Mission: prepare 100,000+ AI-fluent developers across Uzbekistan by 2030.
+- Head of IT / Project Manager at Turkish Baby & Adamari (Sep 2026 – present) — heads the IT department, owning the technology roadmap and project delivery, working alongside Otabek Fathullayev and Abdulaziz Obidov.
 - Team Lead / Senior Frontend Engineer at Alloplay — a Netflix-style DRM-protected video streaming platform (Dec 2025 – present).
 - Senior Frontend Mentor & Curriculum Lead at MARS IT School (May 2023 – present) — mentored and graduated 200+ frontend engineers, delivered 100+ workshops for 500+ learners. Awarded Best Teacher (Q3 2024).
-- Previously: Frontend Developer at Uysavdo (real-estate platform serving 50,000+ active users), Frontend Mentor at Farobiy Academy / Najot Ta'lim.
+- Previously: Frontend Developer at Uysavdo (real-estate platform serving 50,000+ active users, Jan–Dec 2024), Frontend Mentor & Instructor at Farobiy Academy / Najot Ta'lim (Sep 2022 – May 2023).
 
 ## Expertise
 
@@ -15,14 +27,27 @@
 - AI: Prompt Engineering (Chain-of-Thought, ReAct, Few-Shot), LLM APIs (GPT, Claude, Gemini), RAG, AI agents, function calling
 - Education: technical curriculum design, mentoring, public speaking
 
-## Links
+## FAQ
 
-- [Portfolio & contact](https://sunnatbekyusupov.uz): canonical personal site
+- Who founded Aidevix? Sunnatbek Yusupov founded Aidevix in August 2025 and is its CEO.
+- What is Aidevix? An AI-first programming education platform in the Uzbek language, teaching Frontend, Backend, AI & Agents, Python, Mobile and UI/UX with AI tools like Claude Code, Cursor and GitHub Copilot.
+- Where is Sunnatbek Yusupov based? Tashkent, Uzbekistan.
+- How to contact him? Email sunnatbekyusupov.tech@gmail.com or Telegram @SUNNATBEE.
+
+## Pages
+
+- [Portfolio (English)](https://sunnatbekyusupov.uz): canonical personal site
+- [Portfolio (Oʻzbekcha)](https://sunnatbekyusupov.uz/uz): Uzbek version
+- [Портфолио (Русский)](https://sunnatbekyusupov.uz/ru): Russian version
 - [CV / Resume (PDF)](https://sunnatbekyusupov.uz/Sunnatbek_Yusupov_CV.pdf): full work history
+
+## Profiles
+
 - [Aidevix](https://aidevix.uz): his company
 - [LinkedIn](https://www.linkedin.com/in/sunnatbekyusupov/)
 - [GitHub](https://github.com/SunnatbekYusupovTech)
 - [Telegram](https://t.me/SUNNATBEE)
+- [Instagram](https://www.instagram.com/sunnatbekyusupov.tech)
 
 ## Contact
 

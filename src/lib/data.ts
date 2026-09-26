@@ -19,7 +19,7 @@ export const SITE = {
   cv: '/Sunnatbek_Yusupov_CV.pdf',
   // Schema.org freshness signallari — kontent o'zgarganda qo'lda yangilang.
   createdAt: '2026-07-09',
-  updatedAt: '2026-07-13',
+  updatedAt: '2026-09-26',
 } as const;
 
 export const SOCIALS = [
@@ -30,14 +30,14 @@ export const SOCIALS = [
   { label: 'Telegram', handle: 'SUNNATBEE', url: 'https://t.me/SUNNATBEE', icon: 'telegram' },
 ] as const;
 
-// sameAs uchun ishlatiladigan barcha "shu men" havolalari (aidevix.uz ham kiritilgan).
+// sameAs uchun faqat shaxsning o'z profillari. aidevix.uz — bu tashkilot sayti,
+// u Person'ga worksFor/founder orqali bog'langan (sameAs'da bo'lsa entity aralashadi).
 export const SAME_AS = [
   'https://www.linkedin.com/in/sunnatbekyusupov/',
   'https://github.com/SunnatbekYusupovTech',
   'https://www.instagram.com/sunnatbekyusupov.tech',
   'https://www.facebook.com/sunnatbek.yusupov.7',
   'https://t.me/SUNNATBEE',
-  'https://aidevix.uz',
 ] as const;
 
 export const ABOUT = [
@@ -67,6 +67,15 @@ export type Experience = {
 };
 
 export const EXPERIENCE: Experience[] = [
+  {
+    role: 'Head of IT / Project Manager',
+    company: 'Turkish Baby & Adamari',
+    period: 'Sep 2026 — Present',
+    points: [
+      'Heading the IT department of Turkish Baby and Adamari as Project Manager — owning the technology roadmap, priorities and delivery.',
+      "Working alongside Otabek Fathullayev and Abdulaziz Obidov to plan, coordinate and ship the companies' IT projects.",
+    ],
+  },
   {
     role: 'Team Lead / Senior Frontend Engineer',
     company: 'Alloplay',

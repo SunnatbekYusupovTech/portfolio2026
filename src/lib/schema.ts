@@ -23,7 +23,12 @@ const personSchema = {
     `${SITE.url}/sunnatbek-yusupov-portrait-studio.jpg`,
     `${SITE.url}/sunnatbek-yusupov-teaching-mars-it-school.jpg`,
   ],
-  jobTitle: ['Founder & CEO at Aidevix', 'Frontend Engineer', 'AI Integration Specialist'],
+  jobTitle: [
+    'Founder & CEO at Aidevix',
+    'Head of IT / Project Manager at Turkish Baby & Adamari',
+    'Frontend Engineer',
+    'AI Integration Specialist',
+  ],
   award: ['Best Teacher — MARS IT School (Q3 2024)'],
   description: `${SITE.name} — ${SITE.role} and ${SITE.subRole} based in ${SITE.location}.`,
   email: `mailto:${SITE.email}`,
@@ -62,8 +67,18 @@ const personSchema = {
     },
     {
       '@type': 'Organization',
+      name: 'Turkish Baby & Adamari',
+      description: 'Head of IT department / Project Manager',
+    },
+    {
+      '@type': 'Organization',
       name: 'Alloplay',
       description: 'Video streaming platform — Team Lead / Senior Frontend Engineer',
+    },
+    {
+      '@type': 'EducationalOrganization',
+      name: 'MARS IT School',
+      description: 'IT school in Tashkent — Senior Frontend Mentor & Curriculum Lead',
     },
   ],
   alumniOf: { '@type': 'EducationalOrganization', name: "Najot Ta'lim" },
@@ -75,6 +90,22 @@ const personSchema = {
     encodingFormat: 'application/pdf',
   },
   sameAs: SAME_AS,
+};
+
+// Aidevix as its own entity, with founder pointing back at the Person — the
+// founder/worksFor pair lets search engines and LLMs resolve "who founded
+// Aidevix" to this site without relying on sameAs.
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  '@id': 'https://aidevix.uz/#organization',
+  name: AIDEVIX.name,
+  url: AIDEVIX.url,
+  description: AIDEVIX.description,
+  foundingDate: '2025-08',
+  foundingLocation: { '@type': 'Place', name: 'Tashkent, Uzbekistan' },
+  founder: { '@id': `${SITE.url}/#person` },
+  sameAs: AIDEVIX.socials.map((s) => s.url).filter((u) => u !== AIDEVIX.url),
 };
 
 const websiteSchema = {
@@ -96,18 +127,24 @@ function profilePageSchema(locale: Locale) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
-    '@id': `${url}/#profilepage`,
+    // Fragment appended to the exact canonical (no trailing slash on /uz, /ru).
+    '@id': `${url}#profilepage`,
     url,
     name: dict.meta.title,
     inLanguage: locale,
     isPartOf: { '@id': `${SITE.url}/#website` },
     about: { '@id': `${SITE.url}/#person` },
     mainEntity: { '@id': `${SITE.url}/#person` },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${SITE.url}${SITE.avatar}`,
+      caption: `Portrait of ${SITE.name}`,
+    },
     dateCreated: SITE.createdAt,
     dateModified: SITE.updatedAt,
   };
 }
 
 export function buildSchemas(locale: Locale) {
-  return [personSchema, websiteSchema, profilePageSchema(locale)];
+  return [personSchema, organizationSchema, websiteSchema, profilePageSchema(locale)];
 }

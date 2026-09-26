@@ -33,6 +33,17 @@ const KEYWORDS = [
   'Sunnatbek Yusupov Oʻzbekiston',
 ];
 
+// Explicit share image. app/opengraph-image.tsx only auto-injects on the root
+// segment — the /uz and /ru layouts override `openGraph`, which dropped
+// og:image/twitter:image there. Declaring it here covers every locale.
+const SHARE_IMAGE = {
+  url: '/opengraph-image',
+  width: 1200,
+  height: 630,
+  type: 'image/png',
+  alt: `${SITE.name} — ${SITE.role}`,
+};
+
 export function buildMetadata(locale: Locale): Metadata {
   const dict = getDict(locale);
   const url = localeUrl(locale);
@@ -55,8 +66,8 @@ export function buildMetadata(locale: Locale): Metadata {
       languages: LANGUAGES,
     },
     openGraph: {
-      // og:image is injected automatically from app/opengraph-image.tsx
       type: 'profile',
+      images: [SHARE_IMAGE],
       url,
       siteName: SITE.name,
       title: dict.meta.title,
@@ -70,6 +81,7 @@ export function buildMetadata(locale: Locale): Metadata {
       card: 'summary_large_image',
       title: dict.meta.title,
       description: dict.meta.description,
+      images: [SHARE_IMAGE],
     },
     verification: {
       google: 'vug4DeupYoJ3V1zIEKH59ltdfWWyKMqSwCktgXp2kB0',

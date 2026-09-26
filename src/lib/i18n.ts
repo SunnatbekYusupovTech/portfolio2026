@@ -171,6 +171,14 @@ const uz: Dict = {
     title: 'Tajriba',
     jobs: [
       {
+        role: "IT bo'limi rahbari / Project Manager",
+        period: '2026 sen — hozir',
+        points: [
+          "Turkish Baby va Adamari kompaniyalarining IT bo'limini Project Manager sifatida boshqaraman — texnologik yo'l xaritasi, ustuvor vazifalar va loyihalarni o'z vaqtida yetkazish uchun javobgarman.",
+          'Otabek Fathullayev va Abdulaziz Obidov bilan birgalikda kompaniyalarning IT loyihalarini rejalashtiramiz, muvofiqlashtiramiz va amalga oshiramiz.',
+        ],
+      },
+      {
         role: 'Team Lead / Senior Frontend muhandis',
         period: '2025 dek — hozir',
         points: [
@@ -320,6 +328,14 @@ const ru: Dict = {
     eyebrow: 'карьера',
     title: 'Опыт работы',
     jobs: [
+      {
+        role: 'Руководитель IT-отдела / Project Manager',
+        period: 'сен 2026 — наст. время',
+        points: [
+          'Руковожу IT-отделом компаний Turkish Baby и Adamari в роли Project Manager — отвечаю за технологическую дорожную карту, приоритеты и сроки реализации.',
+          'Вместе с Отабеком Фатхуллаевым и Абдулазизом Обидовым планирую, координирую и реализую IT-проекты компаний.',
+        ],
+      },
       {
         role: 'Team Lead / Senior Frontend-инженер',
         period: 'дек 2025 — наст. время',
