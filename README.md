@@ -57,7 +57,7 @@ The downloadable CV (`public/Sunnatbek_Yusupov_CV.pdf`) is exported manually fro
 
 - **Canonical `Person` JSON-LD** — this site is the authoritative entity home for
   "Sunnatbek Yusupov" (incl. Cyrillic `alternateName` «Суннатбек Юсупов»);
-  `sameAs` links every profile **and** aidevix.uz together.
+  `sameAs` links his personal profiles; Aidevix is connected through `founder` / `worksFor` (kept out of `sameAs` to avoid merging entities).
 - `WebSite` + per-locale `ProfilePage` schemas, dynamic `sitemap.xml` with
   hreflang alternates, image sitemap, `robots.txt` (AI crawlers welcome), `llms.txt`.
 - Auto-generated, fully static 1200×630 OpenGraph/Twitter image and Apple touch icon.
