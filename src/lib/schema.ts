@@ -74,6 +74,7 @@ const personSchema = {
       name: s.name,
       description: s.description,
       serviceType: s.name,
+      url: s.href,
       provider: { '@id': `${SITE.url}/#person` },
       areaServed: { '@type': 'Country', name: 'Uzbekistan' },
       availableLanguage: ['uz', 'ru', 'en'],
@@ -130,7 +131,7 @@ const organizationSchema = {
   areaServed: { '@type': 'Country', name: 'Uzbekistan' },
   makesOffer: SERVICES.map((s) => ({
     '@type': 'Offer',
-    itemOffered: { '@type': 'Service', name: s.name, provider: { '@id': 'https://aidevix.uz/#organization' } },
+    itemOffered: { '@type': 'Service', name: s.name, url: s.href, provider: { '@id': 'https://aidevix.uz/#organization' } },
   })),
   sameAs: AIDEVIX.socials.map((s) => s.url).filter((u) => u !== AIDEVIX.url),
 };

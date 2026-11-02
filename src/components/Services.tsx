@@ -1,5 +1,5 @@
 import type { ComponentType } from 'react';
-import { FiCpu, FiZap, FiBookOpen, FiArrowUpRight } from 'react-icons/fi';
+import { FiCpu, FiZap, FiBookOpen, FiArrowUpRight, FiExternalLink } from 'react-icons/fi';
 import { RiRobot2Line } from 'react-icons/ri';
 import { SERVICES, SITE } from '@/lib/data';
 import { getDict, type Locale } from '@/lib/i18n';
@@ -40,6 +40,14 @@ export default function Services({ locale }: { locale: Locale }) {
                   </span>
                   <h3 className="mt-5 font-display text-xl font-bold">{copy.name}</h3>
                   <p className="mt-3 leading-relaxed text-muted">{copy.description}</p>
+                  <a
+                    href={service.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-medium text-accent hover:underline"
+                  >
+                    {dict.services.more} <FiExternalLink size={13} aria-hidden="true" />
+                  </a>
                 </article>
               </Reveal>
             );

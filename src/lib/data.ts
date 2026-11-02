@@ -19,7 +19,7 @@ export const SITE = {
   cv: '/Sunnatbek_Yusupov_CV.pdf',
   // Schema.org freshness signallari — kontent o'zgarganda qo'lda yangilang.
   createdAt: '2026-07-09',
-  updatedAt: '2026-11-02',
+  updatedAt: '2026-11-03',
 } as const;
 
 export const SOCIALS = [
@@ -215,6 +215,14 @@ export const PROJECTS: Project[] = [
     href: 'https://github.com/SunnatbekYusupovTech',
     meta: 'Product · Mobile',
   },
+  {
+    name: 'Aidevix CLI',
+    description:
+      'Open-source launcher for 47 AI coding CLIs (Claude Code, Gemini CLI, Codex and more): one command to pick, install and run any of them — built for Aidevix students.',
+    tags: ['Bash', 'Zsh', 'fzf', 'Open source'],
+    href: 'https://github.com/SUNNATBEE/sunnatbeeCLI',
+    meta: 'Open source · MIT',
+  },
 ];
 
 export const AIDEVIX = {
@@ -236,10 +244,13 @@ export const AIDEVIX = {
 // (aligned by index) and the list also feeds Person.makesOffer in the schema.
 export type ServiceKey = 'integration' | 'automation' | 'agents' | 'training';
 
-export const SERVICES: { key: ServiceKey; icon: string; name: string; description: string }[] = [
+// `href` — the detailed service page on aidevix.uz (the company site); the
+// Person.makesOffer schema and the Services cards both link there.
+export const SERVICES: { key: ServiceKey; icon: string; name: string; description: string; href: string }[] = [
   {
     key: 'integration',
     icon: 'cpu',
+    href: 'https://aidevix.uz/xizmatlar/ai-integratsiya',
     name: 'AI integration for business',
     description:
       'Integrating ChatGPT, Claude and Gemini models into existing products, CRMs, websites and Telegram bots — from strategy and pilot to production rollout.',
@@ -247,6 +258,7 @@ export const SERVICES: { key: ServiceKey; icon: string; name: string; descriptio
   {
     key: 'automation',
     icon: 'zap',
+    href: 'https://aidevix.uz/xizmatlar/avtomatlashtirish',
     name: 'Business process automation with AI',
     description:
       'Automating sales, support, document processing and reporting with LLM-powered workflows, so teams spend hours instead of days on routine work.',
@@ -254,6 +266,7 @@ export const SERVICES: { key: ServiceKey; icon: string; name: string; descriptio
   {
     key: 'agents',
     icon: 'bot',
+    href: 'https://aidevix.uz/xizmatlar/ai-agent',
     name: 'Building AI agents',
     description:
       'Designing and shipping autonomous AI agents with tool calling, RAG over company data and multi-step workflows — in Uzbek, Russian and English.',
@@ -261,6 +274,7 @@ export const SERVICES: { key: ServiceKey; icon: string; name: string; descriptio
   {
     key: 'training',
     icon: 'book',
+    href: 'https://aidevix.uz/xizmatlar/korporativ-ai-trening',
     name: 'AI training & courses',
     description:
       'Teaching AI-first development to teams and individuals — corporate workshops, prompt engineering, Claude Code / Cursor workflows and the Aidevix course platform.',

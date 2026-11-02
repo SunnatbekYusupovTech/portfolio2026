@@ -68,6 +68,7 @@ export type Dict = {
     intro: string;
     items: { name: string; description: string }[];
     cta: string;
+    more: string;
   };
   // Answer-engine FAQ — rendered on the page and as FAQPage JSON-LD.
   faq: { eyebrow: string; title: string; items: { q: string; a: string }[] };
@@ -141,6 +142,7 @@ const en: Dict = {
       'I help companies in Uzbekistan implement artificial intelligence: integrating LLMs into existing systems, automating business processes, building AI agents and training teams to work AI-first.',
     items: SERVICES.map((sv) => ({ name: sv.name, description: sv.description })),
     cta: 'Discuss a project',
+    more: 'Details on aidevix.uz',
   },
   faq: { eyebrow: 'questions', title: 'Frequently asked questions', items: FAQ },
   footer: { built: 'Built with Next.js.', credit: 'designed & coded by' },
@@ -293,6 +295,11 @@ const uz: Dict = {
           'Aidevix mobil tajribasi — kurslar, AI murabbiy va progress kuzatuvini native his beruvchi ilovaga olib kiradi.',
         meta: 'Mahsulot · Mobil',
       },
+      {
+        description:
+          "47 ta AI dasturlash CLI'si (Claude Code, Gemini CLI, Codex va b.) uchun ochiq kodli ishga tushirgich: bitta buyruq bilan tanlash, o'rnatish va ishga tushirish — Aidevix o'quvchilari uchun yaratilgan.",
+        meta: 'Ochiq kod · MIT',
+      },
     ],
   },
   contact: {
@@ -330,6 +337,7 @@ const uz: Dict = {
       },
     ],
     cta: 'Loyiha haqida gaplashish',
+    more: "Batafsil — aidevix.uz'da",
   },
   faq: {
     eyebrow: 'savollar',
@@ -507,6 +515,11 @@ const ru: Dict = {
           'Мобильный опыт Aidevix — курсы, AI-коуч и трекинг прогресса в приложении с нативным ощущением.',
         meta: 'Продукт · Mobile',
       },
+      {
+        description:
+          'Open-source лаунчер для 47 AI-CLI для программирования (Claude Code, Gemini CLI, Codex и др.): одна команда, чтобы выбрать, установить и запустить любой из них — создан для студентов Aidevix.',
+        meta: 'Open source · MIT',
+      },
     ],
   },
   contact: {
@@ -544,6 +557,7 @@ const ru: Dict = {
       },
     ],
     cta: 'Обсудить проект',
+    more: 'Подробнее на aidevix.uz',
   },
   faq: {
     eyebrow: 'вопросы',

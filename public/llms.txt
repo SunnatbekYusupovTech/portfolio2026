@@ -2,7 +2,7 @@
 
 > Sunnatbek Yusupov (Cyrillic: Суннатбек Юсупов) is an AI Integration & Automation Specialist, Frontend Engineer and the Founder & CEO of Aidevix — an AI company in Tashkent, Uzbekistan that implements AI for businesses (AI integration, business process automation, AI agents, corporate AI training) and runs the first AI-first programming education platform in the Uzbek language.
 
-Last updated: 2026-11-02
+Last updated: 2026-11-03
 
 ## Quick facts
 
@@ -29,6 +29,9 @@ Sunnatbek Yusupov and Aidevix provide these services to companies in Uzbekistan 
 - Business process automation with AI: automating sales, support, document processing and reporting with LLM-powered workflows.
 - Building AI agents: autonomous agents with tool calling, RAG over company data and multi-step workflows.
 - AI training & courses: corporate workshops, prompt engineering, Claude Code / Cursor workflows, and the Aidevix course platform (https://aidevix.uz).
+
+Detailed service pages (Uzbek): https://aidevix.uz/xizmatlar — /ai-integratsiya, /avtomatlashtirish, /ai-agent, /korporativ-ai-trening.
+Open-source work: Aidevix CLI — https://github.com/SUNNATBEE/sunnatbeeCLI (launcher for 47 AI coding CLIs).
 
 ## Expertise
 
