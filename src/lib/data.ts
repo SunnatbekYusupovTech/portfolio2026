@@ -19,7 +19,7 @@ export const SITE = {
   cv: '/Sunnatbek_Yusupov_CV.pdf',
   // Schema.org freshness signallari — kontent o'zgarganda qo'lda yangilang.
   createdAt: '2026-07-09',
-  updatedAt: '2026-11-03',
+  updatedAt: '2026-11-04',
 } as const;
 
 export const SOCIALS = [
@@ -51,7 +51,7 @@ export const ABOUT = [
 // (award/knowsAbout) so search engines can attribute them to the entity.
 export const ACHIEVEMENTS = [
   { title: 'Best Teacher — MARS IT School', detail: 'Q3 2024 · Frontend & IT instruction', year: '2024' },
-  { title: 'Founder & CEO — Aidevix', detail: 'First AI-first coding school in Uzbek', year: '2025' },
+  { title: 'Founder & CEO — Aidevix', detail: 'First AI-first coding school in Uzbek', year: '2024' },
   { title: 'Team Lead — Alloplay', detail: 'DRM video streaming · Next.js at scale', year: '2025' },
   { title: '200+ engineers mentored', detail: '100+ workshops · 500+ learners taught', year: '2022—' },
 ];
@@ -90,7 +90,7 @@ export const EXPERIENCE: Experience[] = [
     role: 'Founder & AI Curriculum Lead',
     company: 'Aidevix',
     url: 'https://aidevix.uz',
-    period: 'Aug 2025 — Present',
+    period: 'Aug 2024 — Present',
     points: [
       'Founded the premier AI EdTech platform in Central Asia — product vision, content strategy, localized LLM resources.',
       'Designed learning tracks for Prompt Engineering, production LLM workflows and automated AI agents.',
@@ -298,7 +298,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'What is Aidevix?',
-    a: 'Aidevix (aidevix.uz) is a Tashkent-based AI company founded by Sunnatbek Yusupov in 2025. It runs the first AI-first programming education platform in Uzbek and provides AI integration, business automation, AI agent development and corporate AI training for companies in Uzbekistan.',
+    a: 'Aidevix (aidevix.uz) is a Tashkent-based AI company founded by Sunnatbek Yusupov in August 2024. It runs the first AI-first programming education platform in Uzbek and provides AI integration, business automation, AI agent development and corporate AI training for companies in Uzbekistan.',
   },
   {
     q: 'How can I contact Sunnatbek Yusupov about an AI project?',

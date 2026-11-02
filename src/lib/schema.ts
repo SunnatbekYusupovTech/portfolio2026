@@ -124,7 +124,7 @@ const organizationSchema = {
   name: AIDEVIX.name,
   url: AIDEVIX.url,
   description: AIDEVIX.description,
-  foundingDate: '2025-08',
+  foundingDate: '2024-08',
   foundingLocation: { '@type': 'Place', name: 'Tashkent, Uzbekistan' },
   founder: { '@id': `${SITE.url}/#person` },
   knowsAbout: ['Artificial Intelligence', 'AI Integration', 'Business Process Automation', 'AI Agents', 'Programming Education'],

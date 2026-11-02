@@ -211,7 +211,7 @@ const uz: Dict = {
       },
       {
         role: "Asoschi va AI o'quv dasturi rahbari",
-        period: '2025 avg — hozir',
+        period: '2024 avg — hozir',
         points: [
           'Markaziy Osiyodagi yetakchi AI EdTech platformasiga asos soldim — mahsulot vizyoni, kontent strategiyasi, mahalliylashtirilgan LLM resurslari.',
           "Prompt Engineering, production LLM jarayonlari va avtomatlashtirilgan AI agentlar bo'yicha o'quv yo'nalishlarini ishlab chiqdim.",
@@ -258,7 +258,7 @@ const uz: Dict = {
     title: 'Yutuqlar',
     achievements: [
       { title: "Eng yaxshi o'qituvchi — MARS IT School", detail: "2024 Q3 · Frontend va IT ta'limi", year: '2024' },
-      { title: 'Asoschi va CEO — Aidevix', detail: "O'zbek tilidagi ilk AI-first dasturlash maktabi", year: '2025' },
+      { title: 'Asoschi va CEO — Aidevix', detail: "O'zbek tilidagi ilk AI-first dasturlash maktabi", year: '2024' },
       { title: 'Team Lead — Alloplay', detail: 'DRM video striming · Next.js katta miqyosda', year: '2025' },
       { title: '200+ muhandis tayyorlandi', detail: "100+ seminar · 500+ o'quvchi", year: '2022—' },
     ],
@@ -357,7 +357,7 @@ const uz: Dict = {
       },
       {
         q: 'Aidevix nima?',
-        a: "Aidevix (aidevix.uz) — 2025-yilda Sunnatbek Yusupov tomonidan Toshkentda asos solingan AI kompaniyasi. U o'zbek tilidagi ilk AI-first dasturlash ta'limi platformasini yuritadi hamda O'zbekistondagi kompaniyalar uchun AI integratsiya, biznesni avtomatlashtirish, AI agentlar yaratish va korporativ AI treninglarini taqdim etadi.",
+        a: "Aidevix (aidevix.uz) — 2024-yil avgustda Sunnatbek Yusupov tomonidan Toshkentda asos solingan AI kompaniyasi. U o'zbek tilidagi ilk AI-first dasturlash ta'limi platformasini yuritadi hamda O'zbekistondagi kompaniyalar uchun AI integratsiya, biznesni avtomatlashtirish, AI agentlar yaratish va korporativ AI treninglarini taqdim etadi.",
       },
       {
         q: "AI loyihasi bo'yicha Sunnatbek Yusupov bilan qanday bog'lanish mumkin?",
@@ -431,7 +431,7 @@ const ru: Dict = {
       },
       {
         role: 'Основатель и руководитель AI-программы',
-        period: 'авг 2025 — наст. время',
+        period: 'авг 2024 — наст. время',
         points: [
           'Основал ведущую AI EdTech платформу Центральной Азии — видение продукта, контент-стратегия, локализованные LLM-ресурсы.',
           'Разработал учебные треки по Prompt Engineering, production LLM-процессам и автоматизированным AI-агентам.',
@@ -478,7 +478,7 @@ const ru: Dict = {
     title: 'Достижения',
     achievements: [
       { title: 'Лучший преподаватель — MARS IT School', detail: 'Q3 2024 · Frontend и IT-обучение', year: '2024' },
-      { title: 'Основатель и CEO — Aidevix', detail: 'Первая AI-first школа программирования на узбекском', year: '2025' },
+      { title: 'Основатель и CEO — Aidevix', detail: 'Первая AI-first школа программирования на узбекском', year: '2024' },
       { title: 'Team Lead — Alloplay', detail: 'DRM-видеостриминг · Next.js в масштабе', year: '2025' },
       { title: '200+ инженеров подготовлено', detail: '100+ воркшопов · 500+ студентов', year: '2022—' },
     ],
@@ -577,7 +577,7 @@ const ru: Dict = {
       },
       {
         q: 'Что такое Aidevix?',
-        a: 'Aidevix (aidevix.uz) — AI-компания из Ташкента, основанная Суннатбеком Юсуповым в 2025 году. Она развивает первую AI-first платформу обучения программированию на узбекском языке и предоставляет AI-интеграцию, автоматизацию бизнеса, разработку AI-агентов и корпоративное обучение AI для компаний в Узбекистане.',
+        a: 'Aidevix (aidevix.uz) — AI-компания из Ташкента, основанная Суннатбеком Юсуповым в августе 2024 года. Она развивает первую AI-first платформу обучения программированию на узбекском языке и предоставляет AI-интеграцию, автоматизацию бизнеса, разработку AI-агентов и корпоративное обучение AI для компаний в Узбекистане.',
       },
       {
         q: 'Как связаться с Суннатбеком Юсуповым по AI-проекту?',
