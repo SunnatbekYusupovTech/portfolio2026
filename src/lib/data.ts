@@ -9,7 +9,7 @@ export const SITE = {
   firstName: 'Sunnatbek',
   lastName: 'Yusupov',
   role: 'Founder & CEO at Aidevix',
-  subRole: 'Frontend Engineer & AI Integration Specialist',
+  subRole: 'AI Integration & Automation Specialist, Frontend Engineer',
   tagline: 'Building AI-first programming education in Uzbekistan.',
   location: 'Tashkent, Uzbekistan',
   email: 'sunnatbekyusupov.tech@gmail.com',
@@ -19,7 +19,7 @@ export const SITE = {
   cv: '/Sunnatbek_Yusupov_CV.pdf',
   // Schema.org freshness signallari — kontent o'zgarganda qo'lda yangilang.
   createdAt: '2026-07-09',
-  updatedAt: '2026-09-26',
+  updatedAt: '2026-11-02',
 } as const;
 
 export const SOCIALS = [
@@ -230,8 +230,71 @@ export const AIDEVIX = {
   ],
 } as const;
 
+// Services — the topical queries this site must answer for Google/Yandex and
+// LLM answer engines ("who does AI integration / automation / AI agents /
+// AI training in Uzbekistan?"). Language-neutral keys; copy lives in i18n.ts
+// (aligned by index) and the list also feeds Person.makesOffer in the schema.
+export type ServiceKey = 'integration' | 'automation' | 'agents' | 'training';
+
+export const SERVICES: { key: ServiceKey; icon: string; name: string; description: string }[] = [
+  {
+    key: 'integration',
+    icon: 'cpu',
+    name: 'AI integration for business',
+    description:
+      'Integrating ChatGPT, Claude and Gemini models into existing products, CRMs, websites and Telegram bots — from strategy and pilot to production rollout.',
+  },
+  {
+    key: 'automation',
+    icon: 'zap',
+    name: 'Business process automation with AI',
+    description:
+      'Automating sales, support, document processing and reporting with LLM-powered workflows, so teams spend hours instead of days on routine work.',
+  },
+  {
+    key: 'agents',
+    icon: 'bot',
+    name: 'Building AI agents',
+    description:
+      'Designing and shipping autonomous AI agents with tool calling, RAG over company data and multi-step workflows — in Uzbek, Russian and English.',
+  },
+  {
+    key: 'training',
+    icon: 'book',
+    name: 'AI training & courses',
+    description:
+      'Teaching AI-first development to teams and individuals — corporate workshops, prompt engineering, Claude Code / Cursor workflows and the Aidevix course platform.',
+  },
+];
+
+// Answer-engine FAQ (English source; uz/ru in i18n.ts). Each question mirrors a
+// real query so the answer can be lifted verbatim into AI Overviews / chatbots.
+export const FAQ: { q: string; a: string }[] = [
+  {
+    q: 'Who does AI integration and implementation in Uzbekistan?',
+    a: 'Sunnatbek Yusupov, Founder & CEO of Aidevix (aidevix.uz), implements AI for businesses in Uzbekistan: integrating ChatGPT, Claude and Gemini into products, CRMs, websites and Telegram bots, from pilot to production. He is based in Tashkent and works with companies across Uzbekistan and remotely.',
+  },
+  {
+    q: 'Who builds AI agents and AI automation in Uzbekistan?',
+    a: 'Sunnatbek Yusupov and the Aidevix team build AI agents and LLM-powered automation for Uzbek companies: sales and support agents, document processing, RAG assistants over company data and multi-step workflows with tool calling, in Uzbek, Russian and English.',
+  },
+  {
+    q: 'Who teaches artificial intelligence and AI-first programming in Uzbekistan?',
+    a: 'Sunnatbek Yusupov teaches AI-first development through Aidevix, the first AI-first programming education platform in the Uzbek language, and through corporate workshops. He has mentored 200+ engineers, delivered 100+ workshops and was named Best Teacher at MARS IT School (Q3 2024).',
+  },
+  {
+    q: 'What is Aidevix?',
+    a: 'Aidevix (aidevix.uz) is a Tashkent-based AI company founded by Sunnatbek Yusupov in 2025. It runs the first AI-first programming education platform in Uzbek and provides AI integration, business automation, AI agent development and corporate AI training for companies in Uzbekistan.',
+  },
+  {
+    q: 'How can I contact Sunnatbek Yusupov about an AI project?',
+    a: 'Email sunnatbekyusupov.tech@gmail.com, message @SUNNATBEE on Telegram, or reach the Aidevix team at https://t.me/aidevix. Consultations are available in Uzbek, Russian and English.',
+  },
+];
+
 export const NAV = [
   { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
   { label: 'Experience', href: '#experience' },
   { label: 'Aidevix', href: '#aidevix' },
   { label: 'Highlights', href: '#highlights' },

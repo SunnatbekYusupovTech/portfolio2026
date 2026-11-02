@@ -10,7 +10,7 @@ export default function Projects({ locale }: { locale: Locale }) {
   return (
     <section id="projects" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="06" eyebrow={dict.projects.eyebrow} title={dict.projects.title} />
+        <SectionHeading index="07" eyebrow={dict.projects.eyebrow} title={dict.projects.title} />
 
         <div className="grid gap-4 md:grid-cols-2">
           {PROJECTS.map((project, i) => {

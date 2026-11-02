@@ -10,7 +10,7 @@ export default function Experience({ locale }: { locale: Locale }) {
   return (
     <section id="experience" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="02" eyebrow={dict.experience.eyebrow} title={dict.experience.title} />
+        <SectionHeading index="03" eyebrow={dict.experience.eyebrow} title={dict.experience.title} />
 
         <ol className="relative space-y-4 border-l border-line pl-6 sm:pl-8">
           {EXPERIENCE.map((job, i) => {

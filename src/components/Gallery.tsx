@@ -10,7 +10,7 @@ export default function Gallery({ locale }: { locale: Locale }) {
   return (
     <section id="highlights" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="04" eyebrow={dict.highlights.eyebrow} title={dict.highlights.title} />
+        <SectionHeading index="05" eyebrow={dict.highlights.eyebrow} title={dict.highlights.title} />
 
         {/* Achievements — credible, crawlable facts about the person. */}
         <Reveal>

@@ -1,6 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Services from '@/components/Services';
+import Faq from '@/components/Faq';
 import Experience from '@/components/Experience';
 import Aidevix from '@/components/Aidevix';
 import Gallery from '@/components/Gallery';
@@ -17,11 +19,13 @@ export default function HomeSections({ locale }: { locale: Locale }) {
       <main id="main">
         <Hero locale={locale} />
         <About locale={locale} />
+        <Services locale={locale} />
         <Experience locale={locale} />
         <Aidevix locale={locale} />
         <Gallery locale={locale} />
         <Skills locale={locale} />
         <Projects locale={locale} />
+        <Faq locale={locale} />
         <Contact locale={locale} />
       </main>
       <Footer locale={locale} />

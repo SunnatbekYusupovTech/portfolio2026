@@ -31,6 +31,22 @@ const KEYWORDS = [
   'Суннатбек Юсупов Aidevix',
   'Sunnatbek Yusupov dasturchi',
   'Sunnatbek Yusupov Oʻzbekiston',
+  // Topical (service) queries — EN / UZ / RU.
+  'AI integration Uzbekistan',
+  'AI automation Uzbekistan',
+  'AI agents Uzbekistan',
+  'AI consultant Tashkent',
+  'AI training Uzbekistan',
+  "O'zbekistonda sun'iy intellekt joriy qilish",
+  "AI integratsiya O'zbekiston",
+  'biznesni AI bilan avtomatlashtirish',
+  "AI agent yaratish O'zbekiston",
+  "sun'iy intellekt kurslari O'zbekiston",
+  'внедрение ИИ Узбекистан',
+  'AI-интеграция Узбекистан',
+  'автоматизация бизнеса AI Ташкент',
+  'AI-агенты Узбекистан',
+  'обучение AI Узбекистан',
 ];
 
 // Explicit share image. app/opengraph-image.tsx only auto-injects on the root

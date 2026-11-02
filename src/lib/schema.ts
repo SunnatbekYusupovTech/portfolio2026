@@ -1,4 +1,4 @@
-import { AIDEVIX, SAME_AS, SITE } from './data';
+import { AIDEVIX, SAME_AS, SERVICES, SITE } from './data';
 import { getDict, localeUrl, LOCALES, type Locale } from './i18n';
 
 // Canonical Person entity for Google. This site is the authoritative "home" for
@@ -25,9 +25,10 @@ const personSchema = {
   ],
   jobTitle: [
     'Founder & CEO at Aidevix',
+    'AI Integration & Automation Specialist',
+    'AI Consultant',
     'Head of IT / Project Manager at Turkish Baby & Adamari',
     'Frontend Engineer',
-    'AI Integration Specialist',
   ],
   award: ['Best Teacher — MARS IT School (Q3 2024)'],
   description: `${SITE.name} — ${SITE.role} and ${SITE.subRole} based in ${SITE.location}.`,
@@ -43,6 +44,12 @@ const personSchema = {
     'Software Engineering',
     'Programming Education',
     'AI Agents',
+    'AI Integration',
+    'Business Process Automation',
+    'Generative AI',
+    'Retrieval-Augmented Generation',
+    'Corporate AI Training',
+    'AI Consulting',
     'EdTech',
     'Startups',
   ],
@@ -56,8 +63,22 @@ const personSchema = {
     '@type': 'Occupation',
     name: 'Frontend Engineer & AI Integration Specialist',
     occupationLocation: { '@type': 'City', name: 'Tashkent' },
-    skills: 'React, Next.js, TypeScript, Prompt Engineering, LLM integration',
+    skills: 'React, Next.js, TypeScript, Prompt Engineering, LLM integration, AI agents, business automation',
   },
+  // Services offered — lets "who does AI integration / automation / agents /
+  // training in Uzbekistan" resolve to this Person (and to Aidevix below).
+  makesOffer: SERVICES.map((s) => ({
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: s.name,
+      description: s.description,
+      serviceType: s.name,
+      provider: { '@id': `${SITE.url}/#person` },
+      areaServed: { '@type': 'Country', name: 'Uzbekistan' },
+      availableLanguage: ['uz', 'ru', 'en'],
+    },
+  })),
   worksFor: [
     {
       '@type': 'Organization',
@@ -105,8 +126,32 @@ const organizationSchema = {
   foundingDate: '2025-08',
   foundingLocation: { '@type': 'Place', name: 'Tashkent, Uzbekistan' },
   founder: { '@id': `${SITE.url}/#person` },
+  knowsAbout: ['Artificial Intelligence', 'AI Integration', 'Business Process Automation', 'AI Agents', 'Programming Education'],
+  areaServed: { '@type': 'Country', name: 'Uzbekistan' },
+  makesOffer: SERVICES.map((s) => ({
+    '@type': 'Offer',
+    itemOffered: { '@type': 'Service', name: s.name, provider: { '@id': 'https://aidevix.uz/#organization' } },
+  })),
   sameAs: AIDEVIX.socials.map((s) => s.url).filter((u) => u !== AIDEVIX.url),
 };
+
+// FAQPage per locale — the Q&A pairs are rendered verbatim in the page (Faq.tsx),
+// which is what Google requires for the markup to be valid.
+function faqPageSchema(locale: Locale) {
+  const dict = getDict(locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${localeUrl(locale)}#faq`,
+    inLanguage: locale,
+    about: { '@id': `${SITE.url}/#person` },
+    mainEntity: dict.faq.items.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+}
 
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -146,5 +191,5 @@ function profilePageSchema(locale: Locale) {
 }
 
 export function buildSchemas(locale: Locale) {
-  return [personSchema, organizationSchema, websiteSchema, profilePageSchema(locale)];
+  return [personSchema, organizationSchema, websiteSchema, profilePageSchema(locale), faqPageSchema(locale)];
 }

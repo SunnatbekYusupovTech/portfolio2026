@@ -3,7 +3,7 @@
 // and are referenced here; uz/ru are full translations of the same content.
 // Non-linguistic data (URLs, emails, image srcs, tech tags) stays in data.ts.
 // ─────────────────────────────────────────────────────────────────────────────
-import { ABOUT, ACHIEVEMENTS, AIDEVIX, EXPERIENCE, GALLERY, NAV, PROJECTS, SITE, SKILLS, STATS } from './data';
+import { ABOUT, ACHIEVEMENTS, AIDEVIX, EXPERIENCE, FAQ, GALLERY, NAV, PROJECTS, SERVICES, SITE, SKILLS, STATS } from './data';
 
 export const LOCALES = ['en', 'uz', 'ru'] as const;
 export type Locale = (typeof LOCALES)[number];
@@ -61,6 +61,16 @@ export type Dict = {
     items: { description: string; meta?: string }[];
   };
   contact: { eyebrow: string; title: string; blurb: string; downloadCv: string };
+  // Aligned by index with SERVICES in data.ts (key/icon come from there).
+  services: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    items: { name: string; description: string }[];
+    cta: string;
+  };
+  // Answer-engine FAQ — rendered on the page and as FAQPage JSON-LD.
+  faq: { eyebrow: string; title: string; items: { q: string; a: string }[] };
   footer: { built: string; credit: string };
 };
 
@@ -124,22 +134,32 @@ const en: Dict = {
       "I'm open to collaboration, remote opportunities and conversations about AI, EdTech and building products. The fastest way to reach me:",
     downloadCv: 'Download CV',
   },
+  services: {
+    eyebrow: 'what I do',
+    title: 'AI services for business in Uzbekistan',
+    intro:
+      'I help companies in Uzbekistan implement artificial intelligence: integrating LLMs into existing systems, automating business processes, building AI agents and training teams to work AI-first.',
+    items: SERVICES.map((sv) => ({ name: sv.name, description: sv.description })),
+    cta: 'Discuss a project',
+  },
+  faq: { eyebrow: 'questions', title: 'Frequently asked questions', items: FAQ },
   footer: { built: 'Built with Next.js.', credit: 'designed & coded by' },
 };
 
 const uz: Dict = {
   meta: {
     title: `${SITE.name} — Aidevix asoschisi va CEO'si`,
-    description: `${SITE.name} — Aidevix asoschisi va CEO'si, Toshkentdagi Frontend muhandis va AI integratsiya mutaxassisi.`,
+    description: `${SITE.name} — Aidevix asoschisi va CEO'si. O'zbekistonda biznes uchun AI integratsiya, avtomatlashtirish, AI agentlar va AI ta'limi. Toshkent.`,
     ogLocale: 'uz_UZ',
   },
   role: "Aidevix asoschisi va CEO'si",
-  subRole: 'Frontend muhandis va AI integratsiya mutaxassisi',
+  subRole: 'AI integratsiya va avtomatlashtirish mutaxassisi, Frontend muhandis',
   tagline: "O'zbekistonda AI-first dasturlash ta'limini qurmoqdaman.",
   location: "Toshkent, O'zbekiston",
   skipToContent: "Kontentga o'tish",
   nav: [
     { label: 'Haqimda', href: '#about' },
+    { label: 'Xizmatlar', href: '#services' },
     { label: 'Tajriba', href: '#experience' },
     { label: 'Aidevix', href: '#aidevix' },
     { label: 'Yutuqlar', href: '#highlights' },
@@ -282,22 +302,78 @@ const uz: Dict = {
       "Hamkorlik, masofaviy imkoniyatlar hamda AI, EdTech va mahsulot yaratish haqidagi suhbatlarga ochiqman. Menga eng tez yetib borish yo'li:",
     downloadCv: 'CV yuklab olish',
   },
+  services: {
+    eyebrow: 'nima qilaman',
+    title: "O'zbekistonda biznes uchun AI xizmatlari",
+    intro:
+      "O'zbekistondagi kompaniyalarga sun'iy intellektni joriy qilishda yordam beraman: LLM'larni mavjud tizimlarga integratsiya qilish, biznes jarayonlarini avtomatlashtirish, AI agentlar qurish va jamoalarni AI-first ishlashga o'rgatish.",
+    items: [
+      {
+        name: 'Biznes uchun AI integratsiya',
+        description:
+          "ChatGPT, Claude va Gemini modellarini mavjud mahsulot, CRM, sayt va Telegram botlarga integratsiya qilish — strategiya va pilotdan production'gacha.",
+      },
+      {
+        name: 'Biznes jarayonlarini AI bilan avtomatlashtirish',
+        description:
+          "Savdo, mijozlar xizmati, hujjatlar bilan ishlash va hisobotlarni LLM asosidagi jarayonlar bilan avtomatlashtirish — kunlar o'rniga soatlar sarflanadi.",
+      },
+      {
+        name: 'AI agentlar yaratish',
+        description:
+          "Tool calling, kompaniya ma'lumotlari ustida RAG va ko'p bosqichli jarayonlar bilan ishlaydigan avtonom AI agentlarni loyihalash va ishga tushirish — o'zbek, rus va ingliz tillarida.",
+      },
+      {
+        name: "AI ta'limi va kurslar",
+        description:
+          "Jamoalar va yakka mutaxassislarga AI-first dasturlashni o'rgatish — korporativ treninglar, prompt engineering, Claude Code / Cursor bilan ishlash va Aidevix o'quv platformasi.",
+      },
+    ],
+    cta: 'Loyiha haqida gaplashish',
+  },
+  faq: {
+    eyebrow: 'savollar',
+    title: "Ko'p beriladigan savollar",
+    items: [
+      {
+        q: "O'zbekistonda sun'iy intellektni joriy qilish va AI integratsiya bilan kim shug'ullanadi?",
+        a: "Aidevix (aidevix.uz) asoschisi va CEO'si Sunnatbek Yusupov O'zbekistonda biznes uchun sun'iy intellektni joriy qiladi: ChatGPT, Claude va Gemini modellarini mahsulot, CRM, sayt va Telegram botlarga integratsiya qiladi — pilotdan production'gacha. U Toshkentda joylashgan, O'zbekiston bo'ylab va masofaviy ishlaydi.",
+      },
+      {
+        q: "O'zbekistonda AI agentlar va AI avtomatlashtirishni kim quradi?",
+        a: "Sunnatbek Yusupov va Aidevix jamoasi o'zbek kompaniyalari uchun AI agentlar va LLM asosidagi avtomatlashtirish tizimlarini quradi: savdo va qo'llab-quvvatlash agentlari, hujjatlarni qayta ishlash, kompaniya ma'lumotlari ustida RAG yordamchilar va tool calling bilan ko'p bosqichli jarayonlar — o'zbek, rus va ingliz tillarida.",
+      },
+      {
+        q: "O'zbekistonda sun'iy intellekt va AI-first dasturlashdan kim dars beradi?",
+        a: "Sunnatbek Yusupov AI-first dasturlashni o'zbek tilidagi ilk AI-first dasturlash ta'limi platformasi Aidevix orqali va korporativ treninglarda o'rgatadi. U 200+ muhandisni tayyorlagan, 100+ seminar o'tkazgan va MARS IT School'da «Eng yaxshi o'qituvchi» (2024 Q3) deb topilgan.",
+      },
+      {
+        q: 'Aidevix nima?',
+        a: "Aidevix (aidevix.uz) — 2025-yilda Sunnatbek Yusupov tomonidan Toshkentda asos solingan AI kompaniyasi. U o'zbek tilidagi ilk AI-first dasturlash ta'limi platformasini yuritadi hamda O'zbekistondagi kompaniyalar uchun AI integratsiya, biznesni avtomatlashtirish, AI agentlar yaratish va korporativ AI treninglarini taqdim etadi.",
+      },
+      {
+        q: "AI loyihasi bo'yicha Sunnatbek Yusupov bilan qanday bog'lanish mumkin?",
+        a: "sunnatbekyusupov.tech@gmail.com manziliga yozing, Telegramda @SUNNATBEE ga murojaat qiling yoki Aidevix jamoasiga https://t.me/aidevix orqali bog'laning. Konsultatsiyalar o'zbek, rus va ingliz tillarida.",
+      },
+    ],
+  },
   footer: { built: 'Next.js bilan qurilgan.', credit: 'dizayn va kod —' },
 };
 
 const ru: Dict = {
   meta: {
     title: `Суннатбек Юсупов (${SITE.name}) — основатель и CEO Aidevix`,
-    description: `Суннатбек Юсупов — основатель и CEO Aidevix, Frontend-инженер и специалист по AI-интеграции из Ташкента.`,
+    description: `Суннатбек Юсупов — основатель и CEO Aidevix. Внедрение ИИ, AI-интеграция, автоматизация, AI-агенты и обучение AI для бизнеса в Узбекистане. Ташкент.`,
     ogLocale: 'ru_RU',
   },
   role: 'Основатель и CEO Aidevix',
-  subRole: 'Frontend-инженер и специалист по AI-интеграции',
+  subRole: 'Специалист по AI-интеграции и автоматизации, Frontend-инженер',
   tagline: 'Строю AI-first образование в программировании в Узбекистане.',
   location: 'Ташкент, Узбекистан',
   skipToContent: 'К содержимому',
   nav: [
     { label: 'Обо мне', href: '#about' },
+    { label: 'Услуги', href: '#services' },
     { label: 'Опыт', href: '#experience' },
     { label: 'Aidevix', href: '#aidevix' },
     { label: 'Достижения', href: '#highlights' },
@@ -439,6 +515,61 @@ const ru: Dict = {
     blurb:
       'Открыт к сотрудничеству, удалённым проектам и разговорам об AI, EdTech и создании продуктов. Самый быстрый способ связаться со мной:',
     downloadCv: 'Скачать CV',
+  },
+  services: {
+    eyebrow: 'чем занимаюсь',
+    title: 'AI-услуги для бизнеса в Узбекистане',
+    intro:
+      'Помогаю компаниям в Узбекистане внедрять искусственный интеллект: интегрирую LLM в существующие системы, автоматизирую бизнес-процессы, создаю AI-агентов и обучаю команды работать AI-first.',
+    items: [
+      {
+        name: 'AI-интеграция для бизнеса',
+        description:
+          'Интеграция моделей ChatGPT, Claude и Gemini в существующие продукты, CRM, сайты и Telegram-боты — от стратегии и пилота до production.',
+      },
+      {
+        name: 'Автоматизация бизнес-процессов с помощью AI',
+        description:
+          'Автоматизация продаж, поддержки, обработки документов и отчётности на базе LLM-процессов — команды тратят часы вместо дней на рутину.',
+      },
+      {
+        name: 'Разработка AI-агентов',
+        description:
+          'Проектирование и запуск автономных AI-агентов с tool calling, RAG по данным компании и многошаговыми сценариями — на узбекском, русском и английском.',
+      },
+      {
+        name: 'Обучение AI и курсы',
+        description:
+          'Обучение AI-first разработке для команд и специалистов — корпоративные воркшопы, prompt engineering, работа с Claude Code / Cursor и платформа курсов Aidevix.',
+      },
+    ],
+    cta: 'Обсудить проект',
+  },
+  faq: {
+    eyebrow: 'вопросы',
+    title: 'Часто задаваемые вопросы',
+    items: [
+      {
+        q: 'Кто занимается внедрением искусственного интеллекта и AI-интеграцией в Узбекистане?',
+        a: 'Суннатбек Юсупов, основатель и CEO Aidevix (aidevix.uz), внедряет ИИ для бизнеса в Узбекистане: интегрирует ChatGPT, Claude и Gemini в продукты, CRM, сайты и Telegram-боты — от пилота до production. Он базируется в Ташкенте и работает с компаниями по всему Узбекистану и удалённо.',
+      },
+      {
+        q: 'Кто создаёт AI-агентов и AI-автоматизацию в Узбекистане?',
+        a: 'Суннатбек Юсупов и команда Aidevix создают AI-агентов и автоматизацию на базе LLM для узбекских компаний: агенты продаж и поддержки, обработка документов, RAG-ассистенты по данным компании и многошаговые сценарии с tool calling — на узбекском, русском и английском языках.',
+      },
+      {
+        q: 'Кто обучает искусственному интеллекту и AI-first программированию в Узбекистане?',
+        a: 'Суннатбек Юсупов обучает AI-first разработке через Aidevix — первую AI-first платформу обучения программированию на узбекском языке — и на корпоративных воркшопах. Он подготовил 200+ инженеров, провёл 100+ воркшопов и признан лучшим преподавателем MARS IT School (Q3 2024).',
+      },
+      {
+        q: 'Что такое Aidevix?',
+        a: 'Aidevix (aidevix.uz) — AI-компания из Ташкента, основанная Суннатбеком Юсуповым в 2025 году. Она развивает первую AI-first платформу обучения программированию на узбекском языке и предоставляет AI-интеграцию, автоматизацию бизнеса, разработку AI-агентов и корпоративное обучение AI для компаний в Узбекистане.',
+      },
+      {
+        q: 'Как связаться с Суннатбеком Юсуповым по AI-проекту?',
+        a: 'Напишите на sunnatbekyusupov.tech@gmail.com, в Telegram @SUNNATBEE или команде Aidevix: https://t.me/aidevix. Консультации на узбекском, русском и английском языках.',
+      },
+    ],
   },
   footer: { built: 'Сделано на Next.js.', credit: 'дизайн и код —' },
 };

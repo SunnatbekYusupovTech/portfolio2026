@@ -11,7 +11,7 @@ export default function Contact({ locale }: { locale: Locale }) {
   return (
     <section id="contact" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="07" eyebrow={dict.contact.eyebrow} title={dict.contact.title} />
+        <SectionHeading index="09" eyebrow={dict.contact.eyebrow} title={dict.contact.title} />
 
         <Reveal>
           <div className="card relative overflow-hidden p-8 text-center sm:p-12">

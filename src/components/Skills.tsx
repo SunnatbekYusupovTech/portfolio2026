@@ -9,7 +9,7 @@ export default function Skills({ locale }: { locale: Locale }) {
   return (
     <section id="skills" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="05" eyebrow={dict.skills.eyebrow} title={dict.skills.title} />
+        <SectionHeading index="06" eyebrow={dict.skills.eyebrow} title={dict.skills.title} />
 
         <div className="grid gap-4 sm:grid-cols-2">
           {SKILLS.map((group, i) => (

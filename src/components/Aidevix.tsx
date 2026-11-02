@@ -10,7 +10,7 @@ export default function Aidevix({ locale }: { locale: Locale }) {
   return (
     <section id="aidevix" className="scroll-mt-24 py-24">
       <div className="wrap">
-        <SectionHeading index="03" eyebrow={dict.aidevix.eyebrow} title="Aidevix" />
+        <SectionHeading index="04" eyebrow={dict.aidevix.eyebrow} title="Aidevix" />
 
         <Reveal>
           <div className="card card-hover relative overflow-hidden p-8 sm:p-10">
