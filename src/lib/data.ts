@@ -41,7 +41,7 @@ export const SAME_AS = [
 ] as const;
 
 export const ABOUT = [
-  "I'm Sunnatbek Yusupov — a Frontend Engineer, AI Integration Specialist and the Founder & CEO of Aidevix, the first AI-first programming education platform built for the Uzbek-speaking world.",
+  "I'm Sunnatbek Yusupov — a Frontend Engineer, AI Integration Specialist and the Founder & CEO of Aidevix, an AI-first programming education platform built for the Uzbek-speaking world.",
   "Today I lead the frontend engineering team at Alloplay, a Netflix-style DRM-protected video streaming platform, and I've shipped production applications serving 50,000+ active users with React, Next.js and TypeScript.",
   "As Senior Frontend Mentor & Curriculum Lead at MARS IT School — recognized as Best Teacher (Q3 2024) — I've mentored and graduated 200+ frontend engineers and delivered 100+ technical workshops for over 500 learners.",
   "My mission with Aidevix is bold: prepare 100,000+ AI-fluent developers across Uzbekistan by 2030 and connect local talent to global engineering standards.",
@@ -51,7 +51,7 @@ export const ABOUT = [
 // (award/knowsAbout) so search engines can attribute them to the entity.
 export const ACHIEVEMENTS = [
   { title: 'Best Teacher — MARS IT School', detail: 'Q3 2024 · Frontend & IT instruction', year: '2024' },
-  { title: 'Founder & CEO — Aidevix', detail: 'First AI-first coding school in Uzbek', year: '2024' },
+  { title: 'Founder & CEO — Aidevix', detail: 'AI-first coding school in Uzbek', year: '2024' },
   { title: 'Team Lead — Alloplay', detail: 'DRM video streaming · Next.js at scale', year: '2025' },
   { title: '200+ engineers mentored', detail: '100+ workshops · 500+ learners taught', year: '2022—' },
 ];
@@ -83,7 +83,7 @@ export const EXPERIENCE: Experience[] = [
     points: [
       'Leading the frontend team of a Netflix-style streaming platform with DRM-protected video (Shaka Player, Widevine).',
       'Architected a scalable Next.js + TypeScript app — SSR performance, image CDNs and Core Web Vitals.',
-      'Introduced AI-assisted development (Cursor, Copilot), boosting sprint velocity by ~30%.',
+      "Introduced AI-assisted development (Cursor, Copilot) into the team's daily workflow — code review, refactoring and test generation.",
     ],
   },
   {
@@ -92,7 +92,7 @@ export const EXPERIENCE: Experience[] = [
     url: 'https://aidevix.uz',
     period: 'Aug 2024 — Present',
     points: [
-      'Founded the premier AI EdTech platform in Central Asia — product vision, content strategy, localized LLM resources.',
+      'Founded an AI EdTech platform for Uzbek speakers — product vision, content strategy, localized LLM resources and the production AI Coach (LLM mentor chat + AI code review).',
       'Designed learning tracks for Prompt Engineering, production LLM workflows and automated AI agents.',
     ],
   },
@@ -110,7 +110,7 @@ export const EXPERIENCE: Experience[] = [
     company: 'Uysavdo',
     period: 'Jan 2024 — Dec 2024',
     points: [
-      "Shipped core features for Uzbekistan's leading real-estate platform serving 50,000+ active users.",
+      'Shipped core features for a real-estate platform in Uzbekistan serving 50,000+ active users.',
       'Boosted Lighthouse scores (SEO, Accessibility, Speed) by rewriting legacy code into a reusable UI library.',
     ],
   },
@@ -193,7 +193,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'Aidevix',
     description:
-      'The first AI-first programming education platform in Uzbek. Project-based courses in Frontend, Backend, AI & Agents, Python, Mobile and UI/UX — with a 24/7 AI Coach, certificates and a gamified leaderboard.',
+      'AI-first programming education platform in Uzbek. Project-based courses in Frontend, Backend, AI & Agents, Python, Mobile and UI/UX — with a 24/7 AI Coach, certificates and a gamified leaderboard.',
     tags: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     href: 'https://aidevix.uz',
     featured: true,
@@ -223,13 +223,21 @@ export const PROJECTS: Project[] = [
     href: 'https://github.com/SUNNATBEE/sunnatbeeCLI',
     meta: 'Open source · MIT',
   },
+  {
+    name: 'Aidevix AI Coach',
+    description:
+      'Production LLM assistant inside aidevix.uz: Uzbek-language mentor chat with real course/video lookup and an AI code-review playground (18 languages). Provider chain Claude → GPT-4o → Llama 3.3, honesty rules, login gate, rate limits and prompt-injection hardening. Full case study with source links.',
+    tags: ['Next.js', 'Anthropic API', 'OpenAI API', 'Groq', 'Express'],
+    href: 'https://aidevix.uz/keyslar/ai-coach',
+    meta: 'Case study · Production LLM',
+  },
 ];
 
 export const AIDEVIX = {
   name: 'Aidevix',
   url: 'https://aidevix.uz',
   description:
-    'The largest AI & programming learning platform in Uzbek. Learn to build real products with AI tools like Claude Code, Cursor and GitHub Copilot.',
+    'An AI & programming learning platform in Uzbek. Learn to build real products with AI tools like Claude Code, Cursor and GitHub Copilot.',
   socials: [
     { label: 'Website', url: 'https://aidevix.uz' },
     { label: 'YouTube', url: 'https://www.youtube.com/@aidevix' },
@@ -294,11 +302,11 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'Who teaches artificial intelligence and AI-first programming in Uzbekistan?',
-    a: 'Sunnatbek Yusupov teaches AI-first development through Aidevix, the first AI-first programming education platform in the Uzbek language, and through corporate workshops. He has mentored 200+ engineers, delivered 100+ workshops and was named Best Teacher at MARS IT School (Q3 2024).',
+    a: 'Sunnatbek Yusupov teaches AI-first development through Aidevix, an AI-first programming education platform in the Uzbek language, and through corporate workshops. He has mentored 200+ engineers, delivered 100+ workshops and was named Best Teacher at MARS IT School (Q3 2024).',
   },
   {
     q: 'What is Aidevix?',
-    a: 'Aidevix (aidevix.uz) is a Tashkent-based AI company founded by Sunnatbek Yusupov in August 2024. It runs the first AI-first programming education platform in Uzbek and provides AI integration, business automation, AI agent development and corporate AI training for companies in Uzbekistan.',
+    a: 'Aidevix (aidevix.uz) is a Tashkent-based AI company founded by Sunnatbek Yusupov in August 2024. It runs an AI-first programming education platform in Uzbek and provides AI integration, business automation, AI agent development and corporate AI training for companies in Uzbekistan.',
   },
   {
     q: 'How can I contact Sunnatbek Yusupov about an AI project?',

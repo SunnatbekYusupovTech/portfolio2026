@@ -105,7 +105,7 @@ const en: Dict = {
   aidevix: {
     eyebrow: "what I'm building",
     badge: 'Founder & CEO · Live',
-    heading: 'The first AI-first coding education platform in Uzbek',
+    heading: 'AI-first coding education platform in Uzbek',
     description: AIDEVIX.description,
     extra:
       'Structured, project-based courses across Frontend, Backend, AI & Agents, Python, Mobile and UI/UX — backed by a 24/7 AI Coach, verifiable certificates and a gamified leaderboard.',
@@ -181,7 +181,7 @@ const uz: Dict = {
     eyebrow: 'men haqimda',
     title: 'Men kimman',
     paragraphs: [
-      "Men Sunnatbek Yusupovman — Frontend muhandis, AI integratsiya mutaxassisi hamda o'zbek tilida so'zlashuvchi auditoriya uchun yaratilgan ilk AI-first dasturlash ta'limi platformasi Aidevix'ning asoschisi va CEO'siman.",
+      "Men Sunnatbek Yusupovman — Frontend muhandis, AI integratsiya mutaxassisi hamda o'zbek tilida so'zlashuvchi auditoriya uchun yaratilgan AI-first dasturlash ta'limi platformasi Aidevix'ning asoschisi va CEO'siman.",
       "Hozirda Alloplay — DRM bilan himoyalangan, Netflix uslubidagi video-striming platformasida frontend jamoasini boshqaraman; React, Next.js va TypeScript bilan 50 000+ faol foydalanuvchiga xizmat qiladigan production ilovalarni ishlab chiqarganman.",
       "MARS IT School'da Senior Frontend mentor va o'quv dasturi rahbari sifatida — «Eng yaxshi o'qituvchi» (2024 Q3) unvoniga sazovor bo'lganman — 200+ frontend muhandisni tayyorladim va 500+ o'quvchi uchun 100+ texnik seminar o'tkazdim.",
       "Aidevix bilan maqsadim katta: 2030-yilgacha O'zbekiston bo'ylab 100 000+ AI'ni erkin qo'llaydigan dasturchini tayyorlash va mahalliy iste'dodlarni xalqaro muhandislik standartlariga ulash.",
@@ -206,14 +206,14 @@ const uz: Dict = {
         points: [
           'DRM bilan himoyalangan (Shaka Player, Widevine) Netflix uslubidagi striming platformasining frontend jamoasini boshqaryapman.',
           "Kengaytiriladigan Next.js + TypeScript ilovasi arxitekturasini yaratdim — SSR unumdorligi, rasm CDN'lari va Core Web Vitals.",
-          'AI yordamidagi dasturlashni (Cursor, Copilot) joriy qilib, sprint tezligini ~30% oshirdim.',
+          'AI yordamidagi dasturlashni (Cursor, Copilot) jamoaning kundalik ish jarayoniga joriy qildim — kod tahlili, refaktoring va test yozish.',
         ],
       },
       {
         role: "Asoschi va AI o'quv dasturi rahbari",
         period: '2024 avg — hozir',
         points: [
-          'Markaziy Osiyodagi yetakchi AI EdTech platformasiga asos soldim — mahsulot vizyoni, kontent strategiyasi, mahalliylashtirilgan LLM resurslari.',
+          "O'zbek tilida so'zlashuvchilar uchun AI EdTech platformasiga asos soldim — mahsulot vizyoni, kontent strategiyasi, mahalliylashtirilgan LLM resurslari va production'dagi AI Coach (LLM mentor chat + AI kod tahlili).",
           "Prompt Engineering, production LLM jarayonlari va avtomatlashtirilgan AI agentlar bo'yicha o'quv yo'nalishlarini ishlab chiqdim.",
         ],
       },
@@ -229,7 +229,7 @@ const uz: Dict = {
         role: 'Frontend dasturchi',
         period: '2024 yan — 2024 dek',
         points: [
-          "O'zbekistonning 50 000+ faol foydalanuvchiga ega yetakchi ko'chmas mulk platformasi uchun asosiy funksiyalarni ishlab chiqdim.",
+          "O'zbekistondagi 50 000+ faol foydalanuvchiga ega ko'chmas mulk platformasi uchun asosiy funksiyalarni ishlab chiqdim.",
           "Eski kodni qayta ishlatiladigan UI kutubxonasiga o'tkazib, Lighthouse ko'rsatkichlarini (SEO, Accessibility, Speed) oshirdim.",
         ],
       },
@@ -245,9 +245,9 @@ const uz: Dict = {
   aidevix: {
     eyebrow: 'nima qurayapman',
     badge: 'Asoschi va CEO · Jonli',
-    heading: "O'zbek tilidagi ilk AI-first dasturlash ta'limi platformasi",
+    heading: "O'zbek tilidagi AI-first dasturlash ta'limi platformasi",
     description:
-      "O'zbek tilidagi eng yirik AI va dasturlash o'quv platformasi. Claude Code, Cursor va GitHub Copilot kabi AI vositalar bilan haqiqiy mahsulotlar qurishni o'rganing.",
+      "O'zbek tilidagi AI va dasturlash o'quv platformasi. Claude Code, Cursor va GitHub Copilot kabi AI vositalar bilan haqiqiy mahsulotlar qurishni o'rganing.",
     extra:
       "Frontend, Backend, AI va agentlar, Python, Mobile hamda UI/UX bo'yicha loyihaga asoslangan tizimli kurslar — 24/7 AI murabbiy, tasdiqlanadigan sertifikatlar va gamifikatsiyalangan reyting bilan.",
     missionLabel: 'Missiya:',
@@ -258,7 +258,7 @@ const uz: Dict = {
     title: 'Yutuqlar',
     achievements: [
       { title: "Eng yaxshi o'qituvchi — MARS IT School", detail: "2024 Q3 · Frontend va IT ta'limi", year: '2024' },
-      { title: 'Asoschi va CEO — Aidevix', detail: "O'zbek tilidagi ilk AI-first dasturlash maktabi", year: '2024' },
+      { title: 'Asoschi va CEO — Aidevix', detail: "O'zbek tilidagi AI-first dasturlash maktabi", year: '2024' },
       { title: 'Team Lead — Alloplay', detail: 'DRM video striming · Next.js katta miqyosda', year: '2025' },
       { title: '200+ muhandis tayyorlandi', detail: "100+ seminar · 500+ o'quvchi", year: '2022—' },
     ],
@@ -282,7 +282,7 @@ const uz: Dict = {
     items: [
       {
         description:
-          "O'zbek tilidagi ilk AI-first dasturlash ta'limi platformasi. Frontend, Backend, AI va agentlar, Python, Mobile hamda UI/UX bo'yicha loyihaga asoslangan kurslar — 24/7 AI murabbiy, sertifikatlar va gamifikatsiyalangan reyting bilan.",
+          "O'zbek tilidagi AI-first dasturlash ta'limi platformasi. Frontend, Backend, AI va agentlar, Python, Mobile hamda UI/UX bo'yicha loyihaga asoslangan kurslar — 24/7 AI murabbiy, sertifikatlar va gamifikatsiyalangan reyting bilan.",
         meta: 'Asoschi va CEO · Jonli',
       },
       {
@@ -299,6 +299,11 @@ const uz: Dict = {
         description:
           "47 ta AI dasturlash CLI'si (Claude Code, Gemini CLI, Codex va b.) uchun ochiq kodli ishga tushirgich: bitta buyruq bilan tanlash, o'rnatish va ishga tushirish — Aidevix o'quvchilari uchun yaratilgan.",
         meta: 'Ochiq kod · MIT',
+      },
+      {
+        description:
+          "aidevix.uz ichidagi production LLM yordamchi: o'zbek tilida mentor chat (haqiqiy kurs/video qidiruvi bilan) va 18 tilda AI kod tahlili playground'i. Claude → GPT-4o → Llama 3.3 provider zanjiri, halollik qoidalari, login, rate-limit va prompt-injection himoyasi. Manba kodi havolalari bilan to'liq keys.",
+        meta: 'Keys · Production LLM',
       },
     ],
   },
@@ -353,11 +358,11 @@ const uz: Dict = {
       },
       {
         q: "O'zbekistonda sun'iy intellekt va AI-first dasturlashdan kim dars beradi?",
-        a: "Sunnatbek Yusupov AI-first dasturlashni o'zbek tilidagi ilk AI-first dasturlash ta'limi platformasi Aidevix orqali va korporativ treninglarda o'rgatadi. U 200+ muhandisni tayyorlagan, 100+ seminar o'tkazgan va MARS IT School'da «Eng yaxshi o'qituvchi» (2024 Q3) deb topilgan.",
+        a: "Sunnatbek Yusupov AI-first dasturlashni o'zbek tilidagi AI-first dasturlash ta'limi platformasi Aidevix orqali va korporativ treninglarda o'rgatadi. U 200+ muhandisni tayyorlagan, 100+ seminar o'tkazgan va MARS IT School'da «Eng yaxshi o'qituvchi» (2024 Q3) deb topilgan.",
       },
       {
         q: 'Aidevix nima?',
-        a: "Aidevix (aidevix.uz) — 2024-yil avgustda Sunnatbek Yusupov tomonidan Toshkentda asos solingan AI kompaniyasi. U o'zbek tilidagi ilk AI-first dasturlash ta'limi platformasini yuritadi hamda O'zbekistondagi kompaniyalar uchun AI integratsiya, biznesni avtomatlashtirish, AI agentlar yaratish va korporativ AI treninglarini taqdim etadi.",
+        a: "Aidevix (aidevix.uz) — 2024-yil avgustda Sunnatbek Yusupov tomonidan Toshkentda asos solingan AI kompaniyasi. U o'zbek tilidagi AI-first dasturlash ta'limi platformasini yuritadi hamda O'zbekistondagi kompaniyalar uchun AI integratsiya, biznesni avtomatlashtirish, AI agentlar yaratish va korporativ AI treninglarini taqdim etadi.",
       },
       {
         q: "AI loyihasi bo'yicha Sunnatbek Yusupov bilan qanday bog'lanish mumkin?",
@@ -401,7 +406,7 @@ const ru: Dict = {
     eyebrow: 'обо мне',
     title: 'Кто я',
     paragraphs: [
-      'Я Суннатбек Юсупов — Frontend-инженер, специалист по AI-интеграции, основатель и CEO Aidevix — первой AI-first платформы обучения программированию для узбекоязычной аудитории.',
+      'Я Суннатбек Юсупов — Frontend-инженер, специалист по AI-интеграции, основатель и CEO Aidevix — AI-first платформы обучения программированию для узбекоязычной аудитории.',
       'Сегодня я руковожу frontend-командой Alloplay — стримингового сервиса в стиле Netflix с DRM-защитой видео, и создал production-приложения на React, Next.js и TypeScript, которыми пользуются более 50 000 активных пользователей.',
       'Как Senior Frontend-ментор и руководитель учебной программы в MARS IT School — с наградой «Лучший преподаватель» (Q3 2024) — я подготовил и выпустил 200+ frontend-инженеров и провёл 100+ технических воркшопов для 500+ студентов.',
       'Моя миссия с Aidevix амбициозна: подготовить к 2030 году 100 000+ разработчиков в Узбекистане, свободно владеющих AI, и связать местные таланты с мировыми инженерными стандартами.',
@@ -426,14 +431,14 @@ const ru: Dict = {
         points: [
           'Руковожу frontend-командой стримингового сервиса в стиле Netflix с DRM-защитой видео (Shaka Player, Widevine).',
           'Спроектировал масштабируемое приложение на Next.js + TypeScript — SSR-производительность, CDN для изображений и Core Web Vitals.',
-          'Внедрил AI-ассистированную разработку (Cursor, Copilot), ускорив спринты примерно на 30%.',
+          'Внедрил AI-ассистированную разработку (Cursor, Copilot) в ежедневный процесс команды — code review, рефакторинг и написание тестов.',
         ],
       },
       {
         role: 'Основатель и руководитель AI-программы',
         period: 'авг 2024 — наст. время',
         points: [
-          'Основал ведущую AI EdTech платформу Центральной Азии — видение продукта, контент-стратегия, локализованные LLM-ресурсы.',
+          'Основал AI EdTech платформу для узбекоязычной аудитории — видение продукта, контент-стратегия, локализованные LLM-ресурсы и production AI Coach (LLM-чат ментора + AI-разбор кода).',
           'Разработал учебные треки по Prompt Engineering, production LLM-процессам и автоматизированным AI-агентам.',
         ],
       },
@@ -449,7 +454,7 @@ const ru: Dict = {
         role: 'Frontend-разработчик',
         period: 'янв 2024 — дек 2024',
         points: [
-          'Разрабатывал ключевые функции ведущей платформы недвижимости Узбекистана с 50 000+ активных пользователей.',
+          'Разрабатывал ключевые функции платформы недвижимости в Узбекистане с 50 000+ активных пользователей.',
           'Поднял показатели Lighthouse (SEO, Accessibility, Speed), переписав legacy-код в переиспользуемую UI-библиотеку.',
         ],
       },
@@ -465,7 +470,7 @@ const ru: Dict = {
   aidevix: {
     eyebrow: 'что я создаю',
     badge: 'Основатель и CEO · Live',
-    heading: 'Первая AI-first платформа обучения программированию на узбекском языке',
+    heading: 'AI-first платформа обучения программированию на узбекском языке',
     description:
       'Крупнейшая платформа обучения AI и программированию на узбекском языке. Учитесь создавать реальные продукты с AI-инструментами: Claude Code, Cursor и GitHub Copilot.',
     extra:
@@ -502,7 +507,7 @@ const ru: Dict = {
     items: [
       {
         description:
-          'Первая AI-first платформа обучения программированию на узбекском языке. Проектные курсы по Frontend, Backend, AI и агентам, Python, Mobile и UI/UX — с AI-коучем 24/7, сертификатами и геймифицированным рейтингом.',
+          'AI-first платформа обучения программированию на узбекском языке. Проектные курсы по Frontend, Backend, AI и агентам, Python, Mobile и UI/UX — с AI-коучем 24/7, сертификатами и геймифицированным рейтингом.',
         meta: 'Основатель и CEO · Live',
       },
       {
@@ -519,6 +524,11 @@ const ru: Dict = {
         description:
           'Open-source лаунчер для 47 AI-CLI для программирования (Claude Code, Gemini CLI, Codex и др.): одна команда, чтобы выбрать, установить и запустить любой из них — создан для студентов Aidevix.',
         meta: 'Open source · MIT',
+      },
+      {
+        description:
+          'Production LLM-ассистент внутри aidevix.uz: чат-ментор на узбекском с реальным поиском курсов/видео и AI-разбор кода на 18 языках. Цепочка провайдеров Claude → GPT-4o → Llama 3.3, правила честности, вход по аккаунту, rate-limit и защита от prompt-injection. Полный кейс со ссылками на исходный код.',
+        meta: 'Кейс · Production LLM',
       },
     ],
   },
@@ -573,11 +583,11 @@ const ru: Dict = {
       },
       {
         q: 'Кто обучает искусственному интеллекту и AI-first программированию в Узбекистане?',
-        a: 'Суннатбек Юсупов обучает AI-first разработке через Aidevix — первую AI-first платформу обучения программированию на узбекском языке — и на корпоративных воркшопах. Он подготовил 200+ инженеров, провёл 100+ воркшопов и признан лучшим преподавателем MARS IT School (Q3 2024).',
+        a: 'Суннатбек Юсупов обучает AI-first разработке через Aidevix — AI-first платформу обучения программированию на узбекском языке — и на корпоративных воркшопах. Он подготовил 200+ инженеров, провёл 100+ воркшопов и признан лучшим преподавателем MARS IT School (Q3 2024).',
       },
       {
         q: 'Что такое Aidevix?',
-        a: 'Aidevix (aidevix.uz) — AI-компания из Ташкента, основанная Суннатбеком Юсуповым в августе 2024 года. Она развивает первую AI-first платформу обучения программированию на узбекском языке и предоставляет AI-интеграцию, автоматизацию бизнеса, разработку AI-агентов и корпоративное обучение AI для компаний в Узбекистане.',
+        a: 'Aidevix (aidevix.uz) — AI-компания из Ташкента, основанная Суннатбеком Юсуповым в августе 2024 года. Она развивает AI-first платформу обучения программированию на узбекском языке и предоставляет AI-интеграцию, автоматизацию бизнеса, разработку AI-агентов и корпоративное обучение AI для компаний в Узбекистане.',
       },
       {
         q: 'Как связаться с Суннатбеком Юсуповым по AI-проекту?',
