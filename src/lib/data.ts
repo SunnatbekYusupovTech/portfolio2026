@@ -19,7 +19,7 @@ export const SITE = {
   cv: '/Sunnatbek_Yusupov_CV.pdf',
   // Schema.org freshness signallari — kontent o'zgarganda qo'lda yangilang.
   createdAt: '2026-07-09',
-  updatedAt: '2026-11-04',
+  updatedAt: '2026-11-03',
 } as const;
 
 export const SOCIALS = [

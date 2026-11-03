@@ -472,7 +472,7 @@ const ru: Dict = {
     badge: 'Основатель и CEO · Live',
     heading: 'AI-first платформа обучения программированию на узбекском языке',
     description:
-      'Крупнейшая платформа обучения AI и программированию на узбекском языке. Учитесь создавать реальные продукты с AI-инструментами: Claude Code, Cursor и GitHub Copilot.',
+      'Платформа обучения AI и программированию на узбекском языке. Учитесь создавать реальные продукты с AI-инструментами: Claude Code, Cursor и GitHub Copilot.',
     extra:
       'Структурированные проектные курсы по Frontend, Backend, AI и агентам, Python, Mobile и UI/UX — с AI-коучем 24/7, проверяемыми сертификатами и геймифицированным рейтингом.',
     missionLabel: 'Миссия:',
@@ -483,7 +483,7 @@ const ru: Dict = {
     title: 'Достижения',
     achievements: [
       { title: 'Лучший преподаватель — MARS IT School', detail: 'Q3 2024 · Frontend и IT-обучение', year: '2024' },
-      { title: 'Основатель и CEO — Aidevix', detail: 'Первая AI-first школа программирования на узбекском', year: '2024' },
+      { title: 'Основатель и CEO — Aidevix', detail: 'AI-first школа программирования на узбекском', year: '2024' },
       { title: 'Team Lead — Alloplay', detail: 'DRM-видеостриминг · Next.js в масштабе', year: '2025' },
       { title: '200+ инженеров подготовлено', detail: '100+ воркшопов · 500+ студентов', year: '2022—' },
     ],
